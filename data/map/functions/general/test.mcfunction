@@ -1,1 +1,1 @@
-say testafda
+say test
