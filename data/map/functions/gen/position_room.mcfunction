@@ -11,3 +11,4 @@ execute as @e[type=area_effect_cloud,tag=pot_target] if score @s id = random ran
 execute at @s[tag=2x2] run fill ~ ~ ~ ~24 ~ ~24 birch_planks
 execute at @s[tag=1x2] run fill ~ ~ ~ ~12 ~ ~24 birch_planks
 execute at @s[tag=2x1] run fill ~ ~ ~ ~24 ~ ~12 birch_planks
+tag @s remove current_room
