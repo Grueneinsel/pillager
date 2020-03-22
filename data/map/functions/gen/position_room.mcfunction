@@ -3,7 +3,7 @@ execute if entity @s[tag=2x2] as @e[type=area_effect_cloud,tag=test_room] at @s 
 execute if entity @s[tag=1x2] as @e[type=area_effect_cloud,tag=test_room] at @s if blocks 0 100 0 12 100 24 ~ ~ ~ all run tag @s add pot_room
 execute if entity @s[tag=2x1] as @e[type=area_effect_cloud,tag=test_room] at @s if blocks 0 100 0 24 100 12 ~ ~ ~ all run tag @s add pot_room
 scoreboard players set total id 0
-execute as @e[type=area_effect_cloud,tag=pot_room,sort=nearest] run function map:general/give_id
+execute positioned 0 0 0 as @e[type=area_effect_cloud,tag=pot_room,sort=nearest] run function map:general/give_id
 scoreboard players operation limit random = total id
 function map:general/seed_random
 tellraw @p ["",{"score":{"name":"random","objective":"random"}}]
