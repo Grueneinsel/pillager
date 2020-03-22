@@ -36,3 +36,4 @@ scoreboard players set 360 int 360
 scoreboard objectives add random dummy
 scoreboard objectives add cos_click minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add rotation dummy
+scoreboard objectives add id dummy
