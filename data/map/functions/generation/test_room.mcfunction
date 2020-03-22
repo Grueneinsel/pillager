@@ -1,13 +1,8 @@
-scoreboard players set limit random 4
-function map:general/seed_random
-scoreboard players operation @s rotation = random random
-scoreboard players set limit random 6
-function map:general/seed_random
-execute store result entity @s Pos[2] double 12 run scoreboard players get random random
-function map:general/seed_random
-execute store result entity @s Pos[0] double 12 run scoreboard players get random random
-
-
-
-execute at @s[tag=2x2] if blocks 0 100 0 24 100 24 ~ ~ ~ all run tag @s add success_placed
-execute unless entity @s[tag=success_placed] run function map:generation/position_room
+summon area_effect_cloud 0 5 0 {Tags:["tp_me","test_room"],Duration:1000000}
+execute as @e[type=area_effect_cloud,tag=tp_me] store result entity @s Pos[2] double 12 run scoreboard players get z count
+execute as @e[type=area_effect_cloud,tag=tp_me] store result entity @s Pos[0] double 12 run scoreboard players get x count
+tag @e[type=area_effect_cloud,tag=tp_me] remove tp_me
+scoreboard players add x count 1
+execute if score x count matches 7 run scoreboard players add z count 1
+execute if score x count matches 7 run scoreboard players set x count 0
+execute unless score z count matches 7.. run function map:generation/test_room
