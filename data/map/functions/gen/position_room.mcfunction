@@ -6,7 +6,7 @@ scoreboard players set total id 0
 execute positioned 0 0 0 as @e[type=area_effect_cloud,tag=pot_room,sort=nearest] run function map:general/give_id
 scoreboard players operation limit random = total id
 function map:general/seed_random
-tellraw @p ["",{"score":{"name":"random","objective":"random"}}]
+execute if score total id matches 0 run kill @s
 execute as @e[type=area_effect_cloud,tag=pot_room] if score @s id = random random run tp @e[type=area_effect_cloud,tag=current_room] @s
 execute at @s[tag=2x2] run fill ~ ~ ~ ~24 ~ ~24 birch_planks
 execute at @s[tag=1x2] run fill ~ ~ ~ ~12 ~ ~24 birch_planks
