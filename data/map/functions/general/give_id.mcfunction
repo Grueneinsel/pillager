@@ -1,3 +1,2 @@
-scoreboard players set total id 0
-execute as @e[tag=give_id,sort=nearest] run function map:general/loop_id
-tag @e[tag=give_id] remove give_id
+scoreboard players operation @s id = total id
+scoreboard players add total id 1
