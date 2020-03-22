@@ -1,13 +1,9 @@
-scoreboard players set limit random 4
+tag @e[type=area_effect_cloud,tag=pot_room] remove pot_room
+execute if entity @s[tag=2x2] as @e[type=area_effect_cloud,tag=test_room] at @s if blocks 0 100 0 24 100 24 ~ ~ ~ all run tag @s add pot_room
+scoreboard players set total id 0
+execute as @e[type=area_effect_cloud,tag=pot_room,sort=nearest] run function map:general/give_id
+scoreboard players add total id 1
+scoreboard players operation limit random = total id
 function map:general/seed_random
-scoreboard players operation @s rotation = random random
-scoreboard players set limit random 6
-function map:general/seed_random
-execute store result entity @s Pos[2] double 12 run scoreboard players get random random
-function map:general/seed_random
-execute store result entity @s Pos[0] double 12 run scoreboard players get random random
-
-
-
-execute at @s[tag=2x2] if blocks 0 100 0 24 100 24 ~ ~ ~ all run tag @s add success_placed
-execute unless entity @s[tag=success_placed] run function map:generation/position_room
+execute as @e[type=area_effect_cloud,tag=pot_target] if score @s id = random random run tp @e[type=area_effect_cloud,tag=current_room] @s
+execute at @s run fill ~ ~ ~ ~24 ~ ~24 birch_planks
