@@ -5,4 +5,3 @@ scoreboard players reset * join
 scoreboard players set @a join 1
 
 execute at @e[tag=keyboard_v] run particle flame ~ ~ ~ 0 0 0 0 1
-say test
