@@ -25,6 +25,7 @@ scoreboard players set 2 int 2
 scoreboard players set 3 int 3
 scoreboard players set 4 int 4
 scoreboard players set 5 int 5
+scoreboard players set 8 int 8
 scoreboard players set 10 int 10
 scoreboard players set 1000 int 1000
 scoreboard players set -1000 int -1000
@@ -42,3 +43,4 @@ scoreboard objectives add id dummy
 scoreboard objectives add x dummy
 scoreboard objectives add y dummy
 scoreboard objectives add z dummy
+scoreboard objectives add type dummy
