@@ -16,19 +16,19 @@ scoreboard players remove @e[type=!armor_stand,tag=keyboard_pos] z 5000
 #For sign in x-direction switch z and x
 scoreboard players operation @e[type=area_effect_cloud,tag=directional_vector] z /= @s x
 scoreboard players remove @e[type=area_effect_cloud,tag=directional_vector] z 1000
-scoreboard players set @s count 1000
+scoreboard players set @s count 100000
 scoreboard players operation @s count /= @e[type=area_effect_cloud,tag=directional_vector] z
 
 scoreboard players operation @s x *= -1 int
 scoreboard players operation @s x += @e[type=area_effect_cloud,tag=directional_vector] x
 scoreboard players operation @s x *= @s count
+scoreboard players operation @s x /= 100 int
 scoreboard players operation @s x += @e[type=area_effect_cloud,tag=directional_vector] x
 
 scoreboard players operation @s y *= -1 int
 scoreboard players operation @s y += @e[type=area_effect_cloud,tag=directional_vector] y
 scoreboard players operation @s y *= @s count
+scoreboard players operation @s x /= 100 int
 scoreboard players operation @s y += @e[type=area_effect_cloud,tag=directional_vector] y
 
-say @e[type=area_effect_cloud,tag=directional_vector]
 tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"   y= "},{"score":{"name":"@s","objective":"x"}}]
-kill @e[type=area_effect_cloud,tag=directional_vector]
