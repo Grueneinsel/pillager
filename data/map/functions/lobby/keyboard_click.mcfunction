@@ -17,7 +17,7 @@ execute as @e[type=area_effect_cloud,tag=directional_vector] run tellraw @a [{"t
 
 #For sign in x-direction switch z and x
 scoreboard players operation @e[type=area_effect_cloud,tag=directional_vector] z -= @s z
-scoreboard players operation @s z *= 1000 int
+scoreboard players operation @s z *= -1000 int
 scoreboard players operation @s z /= @e[type=area_effect_cloud,tag=directional_vector] z
 
 scoreboard players operation @e[type=area_effect_cloud,tag=directional_vector] x -= @s x
