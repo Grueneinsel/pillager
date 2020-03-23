@@ -12,8 +12,8 @@ tag @s add keyboard_pos
 scoreboard players remove @e[type=!armor_stand,tag=keyboard_pos] x 32000
 scoreboard players remove @e[type=!armor_stand,tag=keyboard_pos] y 7000
 scoreboard players remove @e[type=!armor_stand,tag=keyboard_pos] z 5000
-tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"\ny= "},{"score":{"name":"@s","objective":"y"}},{"text":"\nz= "},{"score":{"name":"@s","objective":"z"}}]
-execute as @e[type=area_effect_cloud,tag=directional_vector] run tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"\ny= "},{"score":{"name":"@s","objective":"y"}},{"text":"\nz= "},{"score":{"name":"@s","objective":"z"}}]
+tellraw @a [{"\ntext":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"\ny= "},{"score":{"name":"@s","objective":"y"}},{"text":"\nz= "},{"score":{"name":"@s","objective":"z"}}]
+execute as @e[type=area_effect_cloud,tag=directional_vector] run tellraw @a [{"\ntext":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"\ny= "},{"score":{"name":"@s","objective":"y"}},{"text":"\nz= "},{"score":{"name":"@s","objective":"z"}}]
 
 #For sign in x-direction switch z and x
 scoreboard players operation @e[type=area_effect_cloud,tag=directional_vector] z -= @s z
