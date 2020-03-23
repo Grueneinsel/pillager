@@ -1,8 +1,6 @@
-
-execute at @s[tag=2x2] run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"map:square_room_d"}
-
-#Number of rooms * 8
-scoreboard players set limit random 8
+##Number of rooms * 8
+execute if entity @s[tag=4tiles] run scoreboard players set limit random 8
+execute if entity @s[tag=2tiles] run scoreboard players set limit random 40
 function map:general/seed_random
 
 scoreboard players operation @s type = seed random
@@ -11,7 +9,5 @@ scoreboard players operation @s rotation = seed random
 scoreboard players operation @s[tag=4tiles] rotation %= 4 int
 scoreboard players operation @s[tag=2tiles] rotation %= 2 int
 scoreboard players operation seed random %= 8 int
-execute if score seed random matches 4..7 run tag @s add flip
-
-execute at @s run setblock ~1 ~ ~ redstone_block
-tag @s remove success_placed
+execute if score seed random matches 4..7 run scoreboard players set @s flip 1
+execute if score seed random matches 0..3 run scoreboard players set @s flip 1
