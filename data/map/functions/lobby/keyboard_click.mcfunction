@@ -9,9 +9,9 @@ execute as @e[type=area_effect_cloud,tag=directional_vector] store result score 
 tag @s add keyboard_pos
 
 #XYZ Coordinates of the sign * 1000
-#scoreboard players remove @e[type=!armor_stand,tag=keyboard_pos] x 320
-#scoreboard players remove @e[type=!armor_stand,tag=keyboard_pos] y 70
-#scoreboard players remove @e[type=!armor_stand,tag=keyboard_pos] z 50
+scoreboard players remove @e[type=!armor_stand,tag=keyboard_pos] x 320
+scoreboard players remove @e[type=!armor_stand,tag=keyboard_pos] y 70
+scoreboard players remove @e[type=!armor_stand,tag=keyboard_pos] z 50
 tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"   y= "},{"score":{"name":"@s","objective":"y"}},{"text":"   z= "},{"score":{"name":"@s","objective":"z"}}]
 execute as @e[type=area_effect_cloud,tag=directional_vector] run tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"   y= "},{"score":{"name":"@s","objective":"y"}},{"text":"   z= "},{"score":{"name":"@s","objective":"z"}}]
 
