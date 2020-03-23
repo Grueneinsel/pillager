@@ -32,7 +32,7 @@ scoreboard players operation @e[type=area_effect_cloud,tag=directional_vector] y
 scoreboard players operation @s y += @e[type=area_effect_cloud,tag=directional_vector] y
 
 scoreboard players add @s x 32000
-scoreboard players add @s y 7000
+scoreboard players add @s y 6000
 scoreboard players set @s z 5000
 
 execute store result entity @e[tag=keyboard_v,limit=1] Pos[0] double 0.001 run scoreboard players get @s x
