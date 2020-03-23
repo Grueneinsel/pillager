@@ -2,7 +2,7 @@
 execute store result score @s x run data get entity @s Pos[0] 1000
 execute store result score @s y run data get entity @s Pos[1] 1000
 execute store result score @s z run data get entity @s Pos[2] 1000
-summon area_effect_cloud ^ ^ ^1 {Tags:["directional_vector","keyboard_pos"]}
+execute anchored eyes run summon area_effect_cloud ^ ^ ^1 {Tags:["directional_vector","keyboard_pos"]}
 execute as @e[type=area_effect_cloud,tag=directional_vector] store result score @s x run data get entity @s Pos[0] 1000
 execute as @e[type=area_effect_cloud,tag=directional_vector] store result score @s y run data get entity @s Pos[1] 1000
 execute as @e[type=area_effect_cloud,tag=directional_vector] store result score @s z run data get entity @s Pos[2] 1000
