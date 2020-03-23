@@ -24,4 +24,4 @@ scoreboard players operation @e[type=area_effect_cloud,tag=directional_vector] x
 scoreboard players operation @e[type=area_effect_cloud,tag=directional_vector] x *= @s z
 scoreboard players operation @e[type=area_effect_cloud,tag=directional_vector] x /= 1000 int
 scoreboard players operation @s x += @e[type=area_effect_cloud,tag=directional_vector] x
-tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"   n= "},{"score":{"name":"@s","objective":"count"}}]
+tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"   n= "},{"score":{"name":"@s","objective":"z"}}]
