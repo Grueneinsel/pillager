@@ -36,4 +36,4 @@ scoreboard players set @s z 5000
 
 execute store result entity @e[tag=keyboard_v,limit=1] Pos[0] double 0.001 run scoreboard players get @s x
 execute store result entity @e[tag=keyboard_v,limit=1] Pos[1] double 0.001 run scoreboard players get @s y
-execute store result entity @e[tag=keyboard_v,limit=1] Pos[2] double 0.001 run scoreboard players get @s x
+execute store result entity @e[tag=keyboard_v,limit=1] Pos[2] double 0.001 run scoreboard players get @s z
