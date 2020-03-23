@@ -37,3 +37,6 @@ scoreboard objectives add random dummy
 scoreboard objectives add cos_click minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add rotation dummy
 scoreboard objectives add id dummy
+scoreboard objectives add x dummy
+scoreboard objectives add y dummy
+scoreboard objectives add z dummy
