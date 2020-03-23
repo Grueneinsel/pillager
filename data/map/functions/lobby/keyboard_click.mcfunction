@@ -16,7 +16,7 @@ tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"   y
 execute as @e[type=area_effect_cloud,tag=directional_vector] run tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"   y= "},{"score":{"name":"@s","objective":"y"}},{"text":"   z= "},{"score":{"name":"@s","objective":"z"}}]
 
 #For sign in x-direction switch z and x
-scoreboard players operation @s z *= 1000 int
+scoreboard players operation @e[type=area_effect_cloud,tag=directional_vector] z *= 1000 int
 scoreboard players operation @e[type=area_effect_cloud,tag=directional_vector] z /= @s z
 scoreboard players remove @e[type=area_effect_cloud,tag=directional_vector] z 1000
 scoreboard players set @s count 1000000
