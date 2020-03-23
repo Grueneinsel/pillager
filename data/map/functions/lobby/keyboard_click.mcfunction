@@ -29,4 +29,6 @@ scoreboard players operation @s y += @e[type=area_effect_cloud,tag=directional_v
 scoreboard players operation @s y *= @s count
 scoreboard players operation @s y += @e[type=area_effect_cloud,tag=directional_vector] y
 
+say @e[type=area_effect_cloud,tag=directional_vector]
 tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"   y= "},{"score":{"name":"@s","objective":"x"}}]
+kill @e[type=area_effect_cloud,tag=directional_vector]
