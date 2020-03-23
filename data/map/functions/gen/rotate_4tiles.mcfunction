@@ -1,7 +1,4 @@
-function map:generation/position_room
-
-execute at @s[tag=2x2] run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"map:square_room_d"}
-
+execute if score @s[tag=2x2] type matches 0 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"4tiles_0_doors"}
 execute at @s[scores={rotation=1}] run data merge block ~ ~ ~ {rotation:"CLOCKWISE_90"}
 execute at @s[scores={rotation=2}] run data merge block ~ ~ ~ {rotation:"CLOCKWISE_180"}
 execute at @s[scores={rotation=3}] run data merge block ~ ~ ~ {rotation:"COUNTERCLOCKWISE_90"}
