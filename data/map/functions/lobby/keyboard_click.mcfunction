@@ -12,8 +12,8 @@ tag @s add keyboard_pos
 scoreboard players remove @e[type=!armor_stand,tag=keyboard_pos] x 32000
 scoreboard players remove @e[type=!armor_stand,tag=keyboard_pos] y 7000
 scoreboard players remove @e[type=!armor_stand,tag=keyboard_pos] z 5000
-tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"   y= "},{"score":{"name":"@s","objective":"y"}},{"text":"   z= "},{"score":{"name":"@s","objective":"z"}}]
-execute as @e[type=area_effect_cloud,tag=directional_vector] run tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"   y= "},{"score":{"name":"@s","objective":"y"}},{"text":"   z= "},{"score":{"name":"@s","objective":"z"}}]
+tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"\ny= "},{"score":{"name":"@s","objective":"y"}},{"text":"\nz= "},{"score":{"name":"@s","objective":"z"}}]
+execute as @e[type=area_effect_cloud,tag=directional_vector] run tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"\ny= "},{"score":{"name":"@s","objective":"y"}},{"text":"\nz= "},{"score":{"name":"@s","objective":"z"}}]
 
 #For sign in x-direction switch z and x
 scoreboard players operation @e[type=area_effect_cloud,tag=directional_vector] z -= @s z
@@ -22,8 +22,6 @@ scoreboard players operation @s z /= @e[type=area_effect_cloud,tag=directional_v
 
 scoreboard players operation @e[type=area_effect_cloud,tag=directional_vector] x -= @s x
 scoreboard players operation @e[type=area_effect_cloud,tag=directional_vector] x *= @s z
-execute as @e[type=area_effect_cloud,tag=directional_vector] run tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}}]
 scoreboard players operation @e[type=area_effect_cloud,tag=directional_vector] x /= 1000 int
-execute as @e[type=area_effect_cloud,tag=directional_vector] run tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}}]
 scoreboard players operation @s x += @e[type=area_effect_cloud,tag=directional_vector] x
 tellraw @a [{"text":"x= "},{"score":{"name":"@s","objective":"x"}},{"text":"   n= "},{"score":{"name":"@s","objective":"z"}}]
