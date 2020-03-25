@@ -31,8 +31,8 @@ execute as @e[type=area_effect_cloud,tag=new_entrance] at @s if block ~ ~ ~1 air
 execute as @e[type=area_effect_cloud,tag=new_entrance] at @s if block ~-1 ~ ~ air run scoreboard players set @s rotation 2
 execute as @e[type=area_effect_cloud,tag=new_entrance] at @s if block ~ ~ ~-1 air run scoreboard players set @s rotation 3
 
-#execute at @s[tag=2x2] run fill ~ ~ ~ ~24 ~ ~24 birch_planks
-#execute at @s[tag=1x2] run fill ~ ~ ~ ~12 ~ ~24 birch_planks
-#execute at @s[tag=2x1] run fill ~ ~ ~ ~24 ~ ~12 birch_planks
+execute at @s[tag=2x2] run fill ~ ~ ~ ~24 ~ ~24 birch_planks
+execute at @s[tag=1x2] run fill ~ ~ ~ ~12 ~ ~24 birch_planks
+execute at @s[tag=2x1] run fill ~ ~ ~ ~24 ~ ~12 birch_planks
 tag @e[type=area_effect_cloud,tag=new_entrance] remove new_entrance
 tag @s remove current_room
