@@ -15,7 +15,6 @@ execute if entity @s[tag=2x2] run scoreboard players set limit random 8
 execute if entity @s[tag=2tiles] run scoreboard players set limit random 40
 function map:general/seed_random
 
-tellraw @p [{"score":{"name":"random","objective":"random"}}]
 scoreboard players operation @s type = random random
 scoreboard players operation @s type /= 8 int
 scoreboard players operation @s rotation = random random
