@@ -1,7 +1,4 @@
-##execute as @e[tag=current_room] at @e[type=area_effect_cloud,tag=new_entrance] if block ~ 4 ~ red_wool at @s run function map:gen/rotate_2tiles
-
-
-execute at @e[type=area_effect_cloud,tag=new_entrance] run setblock ~ ~1 ~ air
+tag @s remove skip
 kill @e[type=area_effect_cloud,tag=new_entrance]
 scoreboard players add @s count 1
 execute if score @s count matches 5 run scoreboard players add @s type 1
@@ -26,9 +23,7 @@ execute if entity @s[tag=1x2,scores={rotation=1,flip=0}] run data merge block ~ 
 execute if entity @s[tag=1x2,scores={rotation=0,flip=1}] run data merge block ~ ~ ~ {rotation:"CLOCKWISE_90",mirror:"FRONT_BACK",posX: 12,posZ: 24}
 execute if entity @s[tag=1x2,scores={rotation=1,flip=1}] run data merge block ~ ~ ~ {rotation:"COUNTERCLOCKWISE_90",mirror:"FRONT_BACK"}
 
-clone ~ ~ ~ ~ ~ ~ ~ ~1 ~
 setblock ~1 ~ ~ redstone_block
-execute at @e[type=area_effect_cloud,tag=new_entrance] run setblock ~ ~1 ~ blue_concrete
 
 execute at @e[type=area_effect_cloud,tag=new_entrance] if block ~ 4 ~ red_wool at @s run tag @s add skip
-execute if function map:gen/rotate_2tiles
+execute if entity @s[tag=skip] run function map:gen/rotate_2tiles
