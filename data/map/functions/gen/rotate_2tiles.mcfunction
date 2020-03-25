@@ -17,7 +17,7 @@ execute if score @s type matches 4 run setblock ~ ~ ~ structure_block{mode:"LOAD
 execute if entity @s[tag=2x1,scores={rotation=1,flip=0}] run data merge block ~ ~ ~ {rotation:"CLOCKWISE_180",posX: 24,posZ: 12}
 execute if entity @s[tag=2x1,scores={rotation=0,flip=1}] run data merge block ~ ~ ~ {mirror:"FRONT_BACK",posX: 24}
 execute if entity @s[tag=2x1,scores={rotation=1,flip=1}] run data merge block ~ ~ ~ {rotation:"CLOCKWISE_180",mirror:"FRONT_BACK",posZ: 12}
-execute if entity @s[tag=1x2,scores={rotation=1,flip=0}] run data merge block ~ ~ ~ {rotation:"CLOCKWISE_90",posX: 12}
+execute if entity @s[tag=1x2,scores={rotation=0,flip=0}] run data merge block ~ ~ ~ {rotation:"CLOCKWISE_90",posX: 12}
 execute if entity @s[tag=1x2,scores={rotation=1,flip=0}] run data merge block ~ ~ ~ {rotation:"COUNTERCLOCKWISE_90",posZ: 24}
 execute if entity @s[tag=1x2,scores={rotation=0,flip=1}] run data merge block ~ ~ ~ {rotation:"CLOCKWISE_90",mirror:"FRONT_BACK",posX: 12,posZ: 24}
 execute if entity @s[tag=1x2,scores={rotation=1,flip=1}] run data merge block ~ ~ ~ {rotation:"COUNTERCLOCKWISE_90",mirror:"FRONT_BACK"}
