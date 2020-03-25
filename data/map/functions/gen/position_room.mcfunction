@@ -9,9 +9,6 @@ scoreboard players operation limit random = total id
 function map:general/seed_random
 execute if score total id matches 0 run kill @s
 execute as @e[type=area_effect_cloud,tag=pot_room] if score @s id = random random run tp @e[type=area_effect_cloud,tag=current_room] @s
-execute at @s[tag=2x2] run fill ~ ~ ~ ~24 ~ ~24 birch_planks
-execute at @s[tag=1x2] run fill ~ ~ ~ ~12 ~ ~24 birch_planks
-execute at @s[tag=2x1] run fill ~ ~ ~ ~24 ~ ~12 birch_planks
 
 ##Number of rooms * 8
 execute if entity @s[tag=2x2] run scoreboard players set limit random 8
@@ -30,5 +27,8 @@ execute if score random random matches 0..3 run scoreboard players set @s flip 0
 execute at @s[tag=2x2] run function map:gen/rotate_4tiles
 execute at @s[tag=2tiles] run function map:gen/rotate_2tiles
 
+execute at @s[tag=2x2] run fill ~ ~ ~ ~24 ~ ~24 birch_planks
+execute at @s[tag=1x2] run fill ~ ~ ~ ~12 ~ ~24 birch_planks
+execute at @s[tag=2x1] run fill ~ ~ ~ ~24 ~ ~12 birch_planks
 tag @e[type=area_effect_cloud,tag=new_entrance] remove new_entrance
 tag @s remove current_room
