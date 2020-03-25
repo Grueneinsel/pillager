@@ -15,6 +15,6 @@ execute if score @s flip matches 1 run scoreboard players add @s rotation 1
 execute if entity @s[scores={rotation=1..2}] run data merge block ~ ~ ~ {posX: 24}
 execute if entity @s[scores={rotation=2..3}] run data merge block ~ ~ ~ {posZ: 24}
 execute if score @s flip matches 1 run scoreboard players remove @s rotation 1
-execute if entity @s run setblock ~1 ~ ~ redstone_block
+#execute if entity @s run setblock ~1 ~ ~ redstone_block
 
 execute at @e[type=area_effect_cloud,tag=new_entrance] if block ~ 4 ~ red_wool run function map:gen/rotate_4tiles
