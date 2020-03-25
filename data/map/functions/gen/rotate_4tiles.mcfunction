@@ -1,3 +1,4 @@
+tag @s remove skip
 kill @e[type=area_effect_cloud,tag=new_entrance]
 scoreboard players add @s count 1
 scoreboard players add @s rotation 1
@@ -17,4 +18,5 @@ execute if entity @s[scores={rotation=2..3}] run data merge block ~ ~ ~ {posZ: 2
 execute if score @s flip matches 1 run scoreboard players remove @s rotation 1
 setblock ~1 ~ ~ redstone_block
 
-execute at @e[type=area_effect_cloud,tag=new_entrance] if block ~ 4 ~ red_wool at @s run function map:gen/rotate_4tiles
+execute at @e[type=area_effect_cloud,tag=new_entrance] if block ~ 4 ~ red_wool at @s run tag @s add skip
+execute if entity @s[tag=skip] run function map:gen/rotate_4tiles
