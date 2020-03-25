@@ -25,4 +25,4 @@ execute if entity @s[tag=1x2,scores={rotation=1,flip=1}] run data merge block ~ 
 clone ~ ~ ~ ~ ~ ~ ~ ~1 ~
 setblock ~1 ~ ~ redstone_block
 
-execute at @e[type=area_effect_cloud,tag=new_entrance] if block ~ 4 ~ red_wool at @s run function map:gen/rotate_2tiles
+#execute at @e[type=area_effect_cloud,tag=new_entrance] if block ~ 4 ~ red_wool at @s run function map:gen/rotate_2tiles
