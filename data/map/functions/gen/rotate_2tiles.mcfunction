@@ -1,9 +1,9 @@
 execute at @e[type=area_effect_cloud,tag=new_entrance] run setblock ~ ~1 ~ air
 kill @e[type=area_effect_cloud,tag=new_entrance]
+scoreboard players add @s count 1
 execute if score @s count matches 5 run scoreboard players add @s type 1
 execute if score @s type matches 5 run scoreboard players set @s type 0
-execute if score @s count matches 5 run scoreboard players set @s count 0
-scoreboard players add @s count 1
+execute if score @s count matches 5 run scoreboard players set @s count 1
 scoreboard players add @s rotation 1
 execute if score @s rotation matches 2 run scoreboard players add @s flip 1
 execute if score @s flip matches 2 run scoreboard players set @s flip 0
