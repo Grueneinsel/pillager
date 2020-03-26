@@ -16,5 +16,5 @@ execute positioned 42 5 24 run scoreboard players set @e[type=area_effect_cloud,
 summon area_effect_cloud 24 5 6 {Tags:["entrance"],Duration:1000000}
 execute positioned 24 5 6 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 0
 execute at @e[type=area_effect_cloud,tag=entrance] run setblock ~ ~ ~ blue_concrete
-function map:gen/connect_room
+#function map:gen/connect_room
 #tellraw @p [{"score":{"name":"random","objective":"random"}}]
