@@ -10,11 +10,11 @@ execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/posi
 summon area_effect_cloud 0 5 0 {Tags:["2tiles","2x1","current_room","normal_room","gen"],Duration:1000000}
 execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/position_room
 summon area_effect_cloud 60 5 6 {Tags:["entrance"],Duration:1000000}
-execute positioned 60 5 6 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 0
+execute positioned 60 5 6 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 3
 summon area_effect_cloud 42 5 24 {Tags:["entrance"],Duration:1000000}
-execute positioned 42 5 24 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 1
+execute positioned 42 5 24 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 0
 summon area_effect_cloud 24 5 6 {Tags:["entrance"],Duration:1000000}
-execute positioned 24 5 6 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 2
+execute positioned 24 5 6 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 1
 execute at @e[type=area_effect_cloud,tag=entrance] run setblock ~ ~ ~ blue_concrete
 function map:gen/connect_room
 #tellraw @p [{"score":{"name":"random","objective":"random"}}]
