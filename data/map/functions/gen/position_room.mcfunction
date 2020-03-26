@@ -1,3 +1,5 @@
+scoreboard players operation @s room_id = total room_id
+scoreboard players add total room_id 1
 tag @e[type=area_effect_cloud,tag=pot_room] remove pot_room
 execute if entity @s[tag=2x2] as @e[type=area_effect_cloud,tag=test_room] at @s if blocks 0 100 0 24 100 24 ~ ~ ~ all run tag @s add pot_room
 execute if entity @s[tag=1x2] as @e[type=area_effect_cloud,tag=test_room] at @s if blocks 0 100 0 12 100 24 ~ ~ ~ all run tag @s add pot_room
