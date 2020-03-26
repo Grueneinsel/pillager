@@ -9,5 +9,5 @@ scoreboard players set @e[type=area_effect_cloud,tag=turn_me,tag=turn_right,scor
 tag @e[type=area_effect_cloud,tag=turn_me] remove turn_me
 execute at @e[tag=connect_me] if block ~ ~ ~ blue_concrete run tag @s add path_found
 execute if entity @s[tag=path_found] run say yes nice es hat funktioniert
-execute unless entity @s[tag=path_found] if entity @e[tag=connect_me] run function map:gen/search_connection
+#execute unless entity @s[tag=path_found] if entity @e[tag=connect_me] run function map:gen/search_connection
 execute unless entity @s[tag=path_found] unless entity @e[tag=connect_me] run say fuck iwas funktioniert nicht
