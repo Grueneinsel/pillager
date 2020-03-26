@@ -1,7 +1,7 @@
 say turn
 execute as @e[type=area_effect_cloud,tag=connect_me,sort=nearest] if score @s turn = total turn at @s run function map:gen/connect_me
 scoreboard players add total turn 1
-scoreboard players add @e[type=area_effect_cloud,tag=connect_me,tag=!turn] turn 1
+scoreboard players add @e[type=area_effect_cloud,tag=connect_me,tag=!turn_me] turn 1
 scoreboard players add @e[type=area_effect_cloud,tag=turn_me] turn 2
 scoreboard players add @e[type=area_effect_cloud,tag=turn_me,tag=turn_left] rotation 1
 scoreboard players remove @e[type=area_effect_cloud,tag=turn_me,tag=turn_right] rotation 1
