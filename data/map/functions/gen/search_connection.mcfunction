@@ -3,8 +3,8 @@ execute as @e[type=area_effect_cloud,tag=connect_me,sort=nearest] if score @s tu
 scoreboard players add total turn 1
 scoreboard players add @e[type=area_effect_cloud,tag=connect_me,tag=straight] turn 1
 scoreboard players add @e[type=area_effect_cloud,tag=turn_me] turn 2
-scoreboard players add @e[type=area_effect_cloud,tag=turn_me,tag=turn_left] rotation 1
-scoreboard players remove @e[type=area_effect_cloud,tag=turn_me,tag=turn_right] rotation 1
+scoreboard players add @e[type=area_effect_cloud,tag=turn_me,tag=turn_right] rotation 1
+scoreboard players remove @e[type=area_effect_cloud,tag=turn_me,tag=turn_left] rotation 1
 scoreboard players set @e[type=area_effect_cloud,tag=turn_me,tag=turn_left,scores={rotation=-1}] rotation 3
 scoreboard players set @e[type=area_effect_cloud,tag=turn_me,tag=turn_right,scores={rotation=4}] rotation 0
 tag @e[type=area_effect_cloud,tag=turn_me] remove turn_me
