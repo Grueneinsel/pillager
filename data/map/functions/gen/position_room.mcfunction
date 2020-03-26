@@ -1,5 +1,3 @@
-scoreboard players operation @s room_id = total room_id
-scoreboard players add total room_id 1
 tag @e[type=area_effect_cloud,tag=pot_room] remove pot_room
 execute if entity @s[tag=2x2] as @e[type=area_effect_cloud,tag=test_room] at @s if blocks 0 100 0 24 100 24 ~ ~ ~ all run tag @s add pot_room
 execute if entity @s[tag=1x2] as @e[type=area_effect_cloud,tag=test_room] at @s if blocks 0 100 0 12 100 24 ~ ~ ~ all run tag @s add pot_room
@@ -31,6 +29,8 @@ execute as @e[type=area_effect_cloud,tag=new_entrance] at @s if block ~1 ~ ~ air
 execute as @e[type=area_effect_cloud,tag=new_entrance] at @s if block ~ ~ ~1 air run scoreboard players set @s rotation 0
 execute as @e[type=area_effect_cloud,tag=new_entrance] at @s if block ~-1 ~ ~ air run scoreboard players set @s rotation 1
 execute as @e[type=area_effect_cloud,tag=new_entrance] at @s if block ~ ~ ~-1 air run scoreboard players set @s rotation 2
+execute as @e[type=area_effect_cloud,tag=new_entrance] run scoreboard players operation @s room_id = total room_id
+scoreboard players add total room_id 1
 
 execute at @s[tag=2x2] run fill ~ ~ ~ ~24 ~ ~24 birch_planks
 execute at @s[tag=1x2] run fill ~ ~ ~ ~12 ~ ~24 birch_planks
