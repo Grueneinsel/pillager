@@ -45,3 +45,5 @@ scoreboard objectives add y dummy
 scoreboard objectives add z dummy
 scoreboard objectives add type dummy
 scoreboard objectives add flip dummy
+scoreboard objectives add room_id dummy
+scoreboard objectives add turn dummy
