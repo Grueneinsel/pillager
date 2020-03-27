@@ -12,3 +12,4 @@ execute at @e[tag=connect_me] if block ~ ~ ~ blue_concrete run tag @s add path_f
 execute if entity @s[tag=path_found] run say success
 #execute unless entity @s[tag=path_found] if entity @e[tag=connect_me] run function map:gen/search_connection
 execute unless entity @s[tag=path_found] unless entity @e[tag=connect_me] run say fuck iwas funktioniert nicht
+say test
