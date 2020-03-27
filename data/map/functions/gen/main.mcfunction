@@ -22,4 +22,5 @@ execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/posi
 
 scoreboard players set total turn 0
 function map:gen/connect_room
+
 #tellraw @p [{"score":{"name":"random","objective":"random"}}]
