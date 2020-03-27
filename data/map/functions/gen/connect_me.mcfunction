@@ -5,5 +5,4 @@ execute rotated as @s positioned ^6 ^ ^6 if block ~ 4 ~ red_concrete unless bloc
 execute rotated as @s positioned ^-6 ^ ^6 if block ~ 4 ~ red_concrete unless block ~ ~ ~ birch_planks run summon area_effect_cloud ~ ~ ~ {Tags:["pot_connection","latest_connection","connection","gen","connect_me","new_connection","turn_right","turn_me"],Duration:1000000}
 scoreboard players operation @e[type=area_effect_cloud,tag=new_connection] rotation = @s rotation
 scoreboard players operation @e[type=area_effect_cloud,tag=new_connection] turn = @s turn
-execute at @e[type=area_effect_cloud,tag=new_connection] run setblock ~ ~ ~ birch_planks
 tag @e[type=area_effect_cloud,tag=new_connection] remove new_connection
