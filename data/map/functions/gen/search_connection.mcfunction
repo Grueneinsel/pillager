@@ -2,7 +2,7 @@ execute as @e[type=area_effect_cloud,tag=connect_me,sort=nearest] if score @s tu
 scoreboard players add total turn 1
 execute unless entity @e[type=area_effect_cloud,tag=latest_connection,tag=straight] run scoreboard players add total turn 1
 execute at @e[type=area_effect_cloud,tag=latest_connection] if block ~ ~ ~ blue_concrete run tag @s add path_found
-execute at @e[type=area_effect_cloud,tag=latest_connection] run setblock ~ ~ ~ birch_planks
+execute at @e[type=area_effect_cloud,tag=latest_connection] unless block ~ ~ ~ blue_concrete run setblock ~ ~ ~ birch_planks
 scoreboard players add @e[type=area_effect_cloud,tag=latest_connection] turn 1
 tag @e[type=area_effect_cloud,tag=latest_connection] remove latest_connection
 scoreboard players add @e[type=area_effect_cloud,tag=turn_me] turn 1
