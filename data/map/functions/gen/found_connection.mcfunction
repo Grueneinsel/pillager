@@ -1,3 +1,4 @@
+say found room
 execute as @e[type=area_effect_cloud,tag=connect_me] at @s if block ~ ~ ~ blue_concrete run tag @s add path_found
 tag @e[type=area_effect_cloud,tag=entrance,sort=nearest,limit=1] add path_found
 execute at @e[type=area_effect_cloud,tag=pot_connection] run setblock ~ ~ ~ air
