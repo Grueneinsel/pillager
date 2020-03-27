@@ -1,4 +1,5 @@
 setblock ~ ~ ~ stone
+say i
 tag @s remove reconnect_me
 execute at @e[type=area_effect_cloud,tag=pot_connection,distance=..7] run setblock ~ ~ ~ birch_planks
 execute as @e[type=area_effect_cloud,tag=pot_connection,distance=..7] run scoreboard players operation total turn < @s turn
