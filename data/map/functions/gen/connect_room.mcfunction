@@ -4,4 +4,3 @@ execute as @e[type=area_effect_cloud,tag=entrance,tag=connect_me] at @s run func
 scoreboard players remove total room_id 1
 execute at @e[type=area_effect_cloud,tag=connection] run setblock ~ ~ ~ air
 execute if entity @e[type=area_effect_cloud,tag=entrance,tag=!path_found] run function map:gen/connect_room
-#
