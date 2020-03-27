@@ -20,3 +20,4 @@ setblock ~1 ~ ~ redstone_block
 
 execute at @e[type=area_effect_cloud,tag=new_entrance] if block ~ 4 ~ red_wool at @s run tag @s add skip
 execute if entity @s[tag=skip] run function map:gen/rotate_4tiles
+#

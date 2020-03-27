@@ -5,3 +5,4 @@ execute at @e[tag=entrance] run setblock ~ ~1 ~ air
 execute at @e[tag=connection] run setblock ~ ~1 ~ air
 kill @e[tag=gen]
 kill @e[type=area_effect_cloud,tag=entrance]
+#

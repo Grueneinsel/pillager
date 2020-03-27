@@ -23,3 +23,4 @@ execute at @e[type=area_effect_cloud,tag=latest_swap] if block ~ ~ ~-1 #minecraf
 execute at @e[type=area_effect_cloud,tag=latest_swap] if block ~ ~ ~-1 #minecraft:carpets if block ~1 ~ ~ #minecraft:carpets if block ~ ~ ~1 #minecraft:carpets if block ~-1 ~ ~ #minecraft:carpets if block ~-1 ~ ~-1 #minecraft:carpets run setblock ~ ~ ~ green_carpet
 
 execute if entity @e[type=area_effect_cloud,tag=latest_swap] run function map:gen/set_carpet
+#
