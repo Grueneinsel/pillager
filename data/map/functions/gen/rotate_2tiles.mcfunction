@@ -1,9 +1,11 @@
 tag @s remove skip
 kill @e[type=area_effect_cloud,tag=new_entrance]
 scoreboard players add @s count 1
-execute if entity @s[scores={count=5,type=0..1}] run scoreboard players set count 0
+execute if entity @s[scores={count=5,type=0}] run scoreboard players set count 0
+execute if entity @s[scores={count=3,type=1}] run scoreboard players set count 0
 execute if entity @s[scores={count=2,type=2}] run scoreboard players set count 0
-execute if entity @s[scores={count=3,type=3..4}] run scoreboard players set count 0
+execute if entity @s[scores={count=5,type=3}] run scoreboard players set count 0
+execute if entity @s[scores={count=3,type=4}] run scoreboard players set count 0
 execute if entity @s[scores={count=0}] run scoreboard players add @s type 1
 execute if entity @s[scores={count=0,type=5}] run scoreboard players set @s type 0
 execute if entity @s[scores={count=0}] run scoreboard players set @s count 1
