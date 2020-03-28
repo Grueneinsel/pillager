@@ -7,5 +7,6 @@ tag @s add pot_connection
 execute at @e[type=area_effect_cloud,tag=pot_connection] run setblock ~ ~ ~ air
 execute as @e[type=area_effect_cloud,tag=reconnect_me] at @s rotated as @s positioned ^ ^ ^-6 run function map:gen/connect_back
 kill @e[type=area_effect_cloud,tag=pot_connection]
+
 tag @s remove connect_me_next
 tag @s remove reconnect_me
