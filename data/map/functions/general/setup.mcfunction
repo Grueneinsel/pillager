@@ -47,3 +47,4 @@ scoreboard objectives add type dummy
 scoreboard objectives add flip dummy
 scoreboard objectives add room_id dummy
 scoreboard objectives add turn dummy
+scoreboard objectives add path dummy
