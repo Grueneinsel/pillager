@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "minecraft:air,
+    "minecraft:air",
     "minecraft:green_concrete"
   ]
 }
