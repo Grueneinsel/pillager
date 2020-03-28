@@ -20,5 +20,6 @@ execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/posi
 #summon area_effect_cloud 0 5 0 {Tags:["2tiles","2x1","current_room","normal_room","gen"],Duration:1000000}
 #execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/position_room
 scoreboard players set total turn 0
+scoreboard players set total room_id 0
 function map:gen/connect_room
 #tellraw @p [{"score":{"name":"random","objective":"random"}}]
