@@ -25,9 +25,6 @@ execute if score random random matches 4..7 run scoreboard players set @s flip 1
 execute if score random random matches 0..3 run scoreboard players set @s flip 0
 execute at @s[tag=2x2] run function map:gen/rotate_4tiles
 execute at @s[tag=2tiles] run function map:gen/rotate_2tiles
-execute at @s[tag=2x2] run fill ~ ~ ~ ~24 ~ ~24 birch_planks
-execute at @s[tag=1x2] run fill ~ ~ ~ ~12 ~ ~24 birch_planks
-execute at @s[tag=2x1] run fill ~ ~ ~ ~24 ~ ~12 birch_planks
 execute as @e[type=area_effect_cloud,tag=new_entrance] at @s if block ~1 ~ ~ air run scoreboard players set @s rotation 3
 execute as @e[type=area_effect_cloud,tag=new_entrance] at @s if block ~ ~ ~1 air run scoreboard players set @s rotation 0
 execute as @e[type=area_effect_cloud,tag=new_entrance] at @s if block ~-1 ~ ~ air run scoreboard players set @s rotation 1
