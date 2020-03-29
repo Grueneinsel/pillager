@@ -35,5 +35,5 @@ execute as @e[type=area_effect_cloud,tag=new_entrance] at @s if block ~ ~ ~-1 ai
 scoreboard players add total room_id 1
 execute as @e[type=area_effect_cloud,tag=new_entrance] run scoreboard players operation @s room_id = total room_id
 
-tag @e[type=area_effect_cloud,tag=new_entrance] remove new_entrance
+#tag @e[type=area_effect_cloud,tag=new_entrance] remove new_entrance
 tag @s remove current_room
