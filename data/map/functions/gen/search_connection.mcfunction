@@ -13,5 +13,5 @@ scoreboard players set @e[type=area_effect_cloud,tag=turn_me,tag=turn_right,scor
 tag @e[type=area_effect_cloud,tag=turn_me] remove turn_me
 
 execute if entity @s[tag=path_found] run function map:gen/found_connection
-execute if score reset count matches 0..1 unless entity @s[tag=path_found] if entity @e[type=area_effect_cloud,tag=connect_me] run function map:gen/search_connection
+#execute if score reset count matches 0..1 unless entity @s[tag=path_found] if entity @e[type=area_effect_cloud,tag=connect_me] run function map:gen/search_connection
 execute if score reset count matches 0..1 unless entity @s[tag=path_found] unless entity @e[type=area_effect_cloud,tag=connect_me] run function map:gen/retry_connection
