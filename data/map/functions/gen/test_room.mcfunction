@@ -9,4 +9,3 @@ scoreboard players add x count 1
 execute if score x count matches 7 run scoreboard players add z count 1
 execute if score x count matches 7 run scoreboard players set x count 0
 execute unless score z count matches 7.. run function map:gen/test_room
-say test
