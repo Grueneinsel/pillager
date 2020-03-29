@@ -13,6 +13,7 @@ execute positioned 42 5 24 run scoreboard players set @e[type=area_effect_cloud,
 summon area_effect_cloud 24 5 6 {Tags:["entrance","gen"],Duration:1000000}
 execute positioned 24 5 6 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 1
 scoreboard players set @e[type=area_effect_cloud,tag=entrance] room_id 0
+execute at @e[type=area_effect_cloud,tag=entrance] run setblock ~ ~ ~ birch_planks
 
 summon area_effect_cloud 0 5 0 {Tags:["2x2","current_room","normal_room","gen"],Duration:1000000}
 execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/position_room
