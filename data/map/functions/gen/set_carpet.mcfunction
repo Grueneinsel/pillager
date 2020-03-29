@@ -2,7 +2,6 @@ execute at @e[type=area_effect_cloud,tag=latest_swap] if block ~ ~ ~-1 black_car
 execute at @e[type=area_effect_cloud,tag=latest_swap] if block ~1 ~ ~ black_carpet run summon area_effect_cloud ~1 ~ ~ {Tags:["swap_carpet","latest_swap"]}
 execute at @e[type=area_effect_cloud,tag=latest_swap] if block ~ ~ ~1 black_carpet run summon area_effect_cloud ~ ~ ~1 {Tags:["swap_carpet","latest_swap"]}
 execute at @e[type=area_effect_cloud,tag=latest_swap] if block ~-1 ~ ~ black_carpet run summon area_effect_cloud ~-1 ~ ~ {Tags:["swap_carpet","latest_swap"]}
-
 kill @e[type=area_effect_cloud,tag=swap_carpet,tag=!latest_swap]
 tag @e[type=area_effect_cloud,tag=latest_swap] remove latest_swap
 
