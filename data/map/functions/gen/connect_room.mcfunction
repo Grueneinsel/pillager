@@ -5,7 +5,7 @@ execute as @e[type=area_effect_cloud,tag=connect_me_next] run scoreboard players
 execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s run scoreboard players operation @s count -= @e[type=area_effect_cloud,tag=entrance,tag=!path_found,tag=!connect_me_next,sort=nearest,limit=1] x
 execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s run scoreboard players operation @s count -= @e[type=area_effect_cloud,tag=entrance,tag=!path_found,tag=!connect_me_next,sort=nearest,limit=1] z
 execute as @e[type=area_effect_cloud,tag=connect_me_next] if score @s count matches ..-1 run scoreboard players operation @s count *= -1 int
-scoreboard players set @e[type=area_effect_cloud,tag=connect_me_next,tag=middle] count 180
+scoreboard players set @e[type=area_effect_cloud,tag=connect_me_next,tag=middle_path] count 180
 execute at @e[type=area_effect_cloud,tag=entrance] run setblock ~ ~ ~ blue_concrete
 execute at @e[type=area_effect_cloud,tag=connect_me_next] run setblock ~ ~ ~ birch_planks
 execute if entity @e[type=area_effect_cloud,tag=connect_me_next] run function map:gen/connect_door
