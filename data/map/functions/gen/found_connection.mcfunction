@@ -12,4 +12,3 @@ tag @s remove connect_me_next
 tag @s remove reconnect_me
 tag @s remove retry
 say Successfully found connection
-adad
