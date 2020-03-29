@@ -24,5 +24,5 @@ function map:gen/check_room
 execute as @e[type=area_effect_cloud,tag=entrance] store result score @s x run data get entity @s Pos[0]
 execute as @e[type=area_effect_cloud,tag=entrance] store result score @s z run data get entity @s Pos[2]
 scoreboard players set total room_id 0
-function map:gen/connect_room
+#function map:gen/connect_room
 #tellraw @p [{"score":{"name":"random","objective":"random"}}]
