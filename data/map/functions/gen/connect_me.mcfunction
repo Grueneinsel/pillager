@@ -1,3 +1,4 @@
+#test
 tag @s remove connect_me
 execute store result entity @s Rotation[0] float 90 run scoreboard players get @s rotation
 execute rotated as @s positioned ^ ^ ^12 if block ~ 4 ~ red_concrete if block ~ ~ ~ #map:valid run summon area_effect_cloud ~ ~ ~ {Tags:["pot_connection","latest_connection","connection","gen","connect_me","new_connection","straight"],Duration:1000000}
