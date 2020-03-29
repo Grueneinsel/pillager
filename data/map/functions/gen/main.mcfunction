@@ -5,11 +5,11 @@ scoreboard players operation start_seed random = seed random
 function map:gen/test_room
 kill @e[type=area_effect_cloud,tag=test_room,scores={x=2..4,z=0..1}]
 
-summon area_effect_cloud 60 5 6 {Tags:["entrance"],Duration:1000000}
+summon area_effect_cloud 60 5 6 {Tags:["entrance","gen"],Duration:1000000}
 execute positioned 60 5 6 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 3
-summon area_effect_cloud 42 5 24 {Tags:["entrance"],Duration:1000000}
+summon area_effect_cloud 42 5 24 {Tags:["entrance","gen"],Duration:1000000}
 execute positioned 42 5 24 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 0
-summon area_effect_cloud 24 5 6 {Tags:["entrance"],Duration:1000000}
+summon area_effect_cloud 24 5 6 {Tags:["entrance","gen"],Duration:1000000}
 execute positioned 24 5 6 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 1
 scoreboard players set @e[type=area_effect_cloud,tag=entrance] room_id 0
 
