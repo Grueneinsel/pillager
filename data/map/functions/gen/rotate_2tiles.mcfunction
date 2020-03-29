@@ -31,4 +31,4 @@ execute if entity @s[tag=1x2,scores={rotation=1,flip=1}] run data merge block ~ 
 setblock ~1 ~ ~ redstone_block
 
 execute at @e[type=area_effect_cloud,tag=new_entrance] unless block ~ 4 ~ red_concrete at @s run tag @s add skip
-#execute if entity @s[tag=skip] run function map:gen/rotate_2tiles
+execute if entity @s[tag=skip] run function map:gen/rotate_2tiles
