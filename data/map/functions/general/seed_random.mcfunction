@@ -1,3 +1,4 @@
+
 fill 0 1 0 0 1 2 air
 setblock 0 1 0 dispenser{LootTable:"map:get_seed"}
 execute store result block 0 1 0 LootTableSeed long 1 run scoreboard players get seed random
