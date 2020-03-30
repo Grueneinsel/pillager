@@ -1,6 +1,7 @@
 say connect door
 scoreboard players set distance count 200
 scoreboard players set total turn 0
+scoreboard players set retry count 0
 tag @e[type=area_effect_cloud,tag=connect_me] remove connect_me
 execute as @e[type=area_effect_cloud,tag=connect_me_next] run scoreboard players operation distance count < @s count
 execute as @e[type=area_effect_cloud,tag=connect_me_next] if score @s count = distance count run tag @s add connect_me
