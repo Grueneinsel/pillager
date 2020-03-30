@@ -18,4 +18,4 @@ execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s po
 execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s positioned ^6 ^ ^6 if block ~ ~ ~ air run setblock ~ ~ ~ oak_planks
 execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s positioned ^-6 ^ ^6 if block ~ ~ ~ air run setblock ~ ~ ~ oak_planks
 execute if entity @e[type=area_effect_cloud,tag=connect_me_next] run function map:gen/connect_door
-execute unless entity @p[tag=debug] if score reset count matches 0..1 if entity @e[type=area_effect_cloud,tag=entrance,tag=!path_found] run function map:gen/connect_room
+execute unless entity @p[tag=debug] if score reset count matches 0..2 if entity @e[type=area_effect_cloud,tag=entrance,tag=!path_found] run function map:gen/connect_room
