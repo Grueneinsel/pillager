@@ -1,3 +1,4 @@
+function map:gen/reset_mansion
 scoreboard players set z count 0
 scoreboard players set x count 0
 scoreboard players set total room_id 0
