@@ -14,4 +14,4 @@ execute at @e[type=area_effect_cloud,tag=connection,scores={path=3..4}] unless b
 tag @e[type=area_effect_cloud,tag=connect_me_next,tag=connect_me] add demo
 execute as @e[type=area_effect_cloud,tag=connect_me_next,tag=connect_me] at @s run function map:gen/search_connection
 execute if score reset count matches 0..1 if entity @e[type=area_effect_cloud,tag=connect_me_next] run say at least 1 door left
-execute if score reset count matches 0..1 if entity @e[type=area_effect_cloud,tag=connect_me_next] run function map:gen/connect_door
+#execute if score reset count matches 0..1 if entity @e[type=area_effect_cloud,tag=connect_me_next] run function map:gen/connect_door
