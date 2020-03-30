@@ -9,10 +9,16 @@ execute if entity @s[scores={count=3..,type=4}] run scoreboard players set @s co
 execute if entity @s[scores={count=0}] run scoreboard players add @s type 1
 execute if entity @s[scores={count=0,type=5}] run scoreboard players set @s type 0
 execute if entity @s[scores={count=0}] run scoreboard players set @s count 1
+
 scoreboard players add @s flip 1
 execute if score @s flip matches 2 run scoreboard players add @s rotation 1
 execute if score @s flip matches 2 run scoreboard players set @s flip 0
 execute if score @s rotation matches 2 run scoreboard players set @s rotation 0
+
+execute at @s[tag=2x1,scores={type=0,rotation=0}] if block ~ 3 ~ red_concrete run scoreboard players add @s count 1
+execute at @s[tag=2x1,scores={type=0,rotation=0}] if block ~ 3 ~ red_concrete run scoreboard players add @s rotation 1
+execute at @s[tag=2x1,scores={type=3,rotation=0}] if block ~ 3 ~ red_concrete run scoreboard players add @s count 1
+execute at @s[tag=2x1,scores={type=3,rotation=0}] if block ~ 3 ~ red_concrete run scoreboard players add @s rotation 1
 
 execute if score @s type matches 0 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"2tiles_0_doors"}
 execute if score @s type matches 1 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"2tiles_1_doors"}
