@@ -6,3 +6,4 @@
 tellraw @a [{"text":"Error occurred! Seed: ","color":"red"},{"score":{"name":"start_seed","objective":"random"},"color":"red"}]
 scoreboard players add reset count 1
 scoreboard players operation seed random = start_seed random
+setblock -6 5 -9 minecraft:redstone_block
