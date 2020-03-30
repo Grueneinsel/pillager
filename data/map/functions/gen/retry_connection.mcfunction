@@ -11,5 +11,5 @@ execute if score retry count matches 1 as @e[type=area_effect_cloud,tag=entrance
 execute if score retry count matches 2.. run scoreboard players add reset count 1
 execute if score retry count matches 2 if score reset count matches 1 run function map:gen/remove_path
 
-execute if score reset count matches 0..1 run function map:gen/search_connection
+#execute if score reset count matches 0..1 run function map:gen/search_connection
 execute if score reset count matches 2 run function map:gen/reset_room
