@@ -3,6 +3,7 @@ scoreboard players set reset count 0
 scoreboard players set @e[type=area_effect_cloud,tag=connection,scores={path=1}] path 2
 scoreboard players set @e[type=area_effect_cloud,tag=connection,scores={path=3}] path 4
 scoreboard players add total room_id 1
+tellraw @a [{"score":{"name":"total","objective":"room_id"},"color":"blue"}]
 execute as @e[type=area_effect_cloud,tag=entrance,tag=!path_found] if score @s room_id = total room_id run tag @s add connect_me_next
 execute as @e[type=area_effect_cloud,tag=connect_me_next] run scoreboard players operation @s count = @s x
 execute as @e[type=area_effect_cloud,tag=connect_me_next] run scoreboard players operation @s count += @s z
