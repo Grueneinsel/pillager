@@ -1,4 +1,3 @@
-say connect door
 scoreboard players set distance count 200
 scoreboard players set total turn 0
 scoreboard players set retry count 0
