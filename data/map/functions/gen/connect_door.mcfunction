@@ -9,6 +9,6 @@ scoreboard players set @e[type=area_effect_cloud,tag=connect_me_next,tag=connect
 execute as @e[type=area_effect_cloud,tag=connect_me_next,tag=connect_me] at @s rotated as @s positioned ^ ^ ^12 if block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
 execute as @e[type=area_effect_cloud,tag=connect_me_next,tag=connect_me] at @s rotated as @s positioned ^6 ^ ^6 if block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
 execute as @e[type=area_effect_cloud,tag=connect_me_next,tag=connect_me] at @s rotated as @s positioned ^-6 ^ ^6 if block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
-execute at @e[type=area_effect_cloud,tag=connection,scores={path=3..4}] run setblock ~ ~ ~ birch_planks
+execute at @e[type=area_effect_cloud,tag=connection,scores={path=3..4}] unless block ~ ~ ~ oak_planks run setblock ~ ~ ~ birch_planks
 execute as @e[type=area_effect_cloud,tag=connect_me_next,tag=connect_me] at @s run function map:gen/search_connection
 execute if score reset count matches 0..1 if entity @e[type=area_effect_cloud,tag=connect_me_next] run function map:gen/connect_door
