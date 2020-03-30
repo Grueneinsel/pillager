@@ -9,9 +9,9 @@ execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s po
 execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s positioned ^6 ^ ^6 if block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
 execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s positioned ^-6 ^ ^6 if block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
 kill @e[type=area_effect_cloud,tag=connect_me_next]
+scoreboard players remove total room_id 1
 
 execute as @e[type=area_effect_cloud,tag=normal_room] if score @s room_id = total room_id at @s run function map:gen/rotate_room
 
-scoreboard players remove total room_id 1
 scoreboard players add rotates count 1
 execute if score rotates count matches 0..3 run scoreboard players set reset count 0
