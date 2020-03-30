@@ -1,4 +1,4 @@
-say connect room
+#say connect room
 scoreboard players set reset count 0
 scoreboard players set @e[type=area_effect_cloud,tag=connection,scores={path=1}] path 2
 scoreboard players set @e[type=area_effect_cloud,tag=connection,scores={path=3}] path 4
