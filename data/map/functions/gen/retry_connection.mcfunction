@@ -14,5 +14,5 @@ execute if score retry count matches 2 if score reset count matches 1 run functi
 execute if score retry count matches 3 at @e[type=area_effect_cloud,tag=connection,scores={path=4}] unless block ~ ~ ~ oak_planks run setblock ~ ~ ~ blue_concrete
 execute if score retry count matches 4 run scoreboard players set reset count 2
 
-execute unless entity @p[tag=debug] run if score reset count matches 0..1 run function map:gen/search_connection
+execute unless entity @p[tag=debug] if score reset count matches 0..1 run function map:gen/search_connection
 execute if score reset count matches 2 run function map:gen/reset_room
