@@ -5,7 +5,7 @@ execute as @e[type=area_effect_cloud,tag=reconnect_me] store result entity @s Ro
 execute at @e[type=area_effect_cloud,tag=reconnect_me] run tag @e[type=area_effect_cloud,tag=entrance,distance=..1,sort=nearest,limit=1] add path_found
 tag @s add pot_connection
 execute at @e[type=area_effect_cloud,tag=pot_connection] run setblock ~ ~ ~ air
-execute as @e[type=area_effect_cloud,tag=reconnect_me] rotated as @s at @s positioned ^ ^ ^-6 run function map:gen/connect_back
+execute at @e[type=area_effect_cloud,tag=reconnect_me] run function map:gen/connect_back
 kill @e[type=area_effect_cloud,tag=pot_connection]
 execute as @e[type=area_effect_cloud,tag=connection,scores={path=1}] at @s rotated as @s positioned ^ ^ ^-6 as @e[type=area_effect_cloud,tag=connection,distance=..7,scores={path=2}] at @s rotated as @s run function map:gen/connect_merge
 tag @s remove connect_me_next
