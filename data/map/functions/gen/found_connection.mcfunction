@@ -10,4 +10,3 @@ execute as @e[type=area_effect_cloud,tag=connection,scores={path=1}] at @s rotat
 tag @s remove connect_me_next
 tag @s remove reconnect_me
 tag @s remove demo
-say Successfully found connection
