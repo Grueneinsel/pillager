@@ -1,4 +1,5 @@
 say connect room
+scoreboard players set reset count 0
 execute as @e[type=area_effect_cloud,tag=entrance,tag=!path_found] if score @s room_id = total room_id run tag @s add connect_me_next
 execute as @e[type=area_effect_cloud,tag=connect_me_next] run scoreboard players operation @s count = @s x
 execute as @e[type=area_effect_cloud,tag=connect_me_next] run scoreboard players operation @s count += @s z
