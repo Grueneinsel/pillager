@@ -23,6 +23,6 @@ execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/posi
 #function map:gen/check_room
 execute as @e[type=area_effect_cloud,tag=entrance] store result score @s x run data get entity @s Pos[0]
 execute as @e[type=area_effect_cloud,tag=entrance] store result score @s z run data get entity @s Pos[2]
-scoreboard players set total room_id 0
+scoreboard players set total room_id -1
 function map:gen/connect_room
 #function map:gen/finished
