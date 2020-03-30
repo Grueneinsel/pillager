@@ -1,3 +1,4 @@
+setblock ~ ~1 ~ glass
 execute positioned ^ ^ ^6 run kill @e[type=area_effect_cloud,tag=connection,tag=!reconnect_me,tag=!pot_connection,distance=..1,limit=1]
 tag @s remove reconnect_me
 execute as @e[type=area_effect_cloud,tag=pot_connection,distance=..7] run scoreboard players operation total turn < @s turn
