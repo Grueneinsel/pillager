@@ -9,7 +9,6 @@ execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s po
 execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s positioned ^6 ^ ^6 if block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
 execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s positioned ^-6 ^ ^6 if block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
 kill @e[type=area_effect_cloud,tag=connect_me_next]
-tellraw @a [{"score":{"name":"total","objective":"random"},"color":"red"}]
 
 execute as @e[type=area_effect_cloud,tag=normal_room] if score @s room_id = total room_id at @s run function map:gen/rotate_room
 
