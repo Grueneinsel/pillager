@@ -3,7 +3,7 @@ kill @e[type=area_effect_cloud,tag=pot_connection]
 scoreboard players set total turn 0
 scoreboard players add retry count 1
 tag @s add connect_me
-say RETRY
+#say RETRY
 
 execute if score retry count matches 1 at @e[type=area_effect_cloud,tag=connection,scores={path=4}] unless block ~ ~ ~ oak_planks run setblock ~ ~ ~ blue_concrete
 execute if score retry count matches 1 as @e[type=area_effect_cloud,tag=entrance,tag=!connect_me] if score @s room_id = total room_id at @s rotated as @s positioned ^ ^ ^6 run function map:gen/lock_own_paths
