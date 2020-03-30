@@ -11,3 +11,5 @@ execute at @s rotated as @s positioned ^-6 ^ ^6 if block ~ ~ ~ oak_planks run se
 execute at @e[type=area_effect_cloud,tag=connection,scores={path=4}] unless block ~ ~ ~ oak_planks run setblock ~ ~ ~ birch_planks
 kill @e[type=area_effect_cloud,tag=connection,scores={path=3}]
 kill @e[type=area_effect_cloud,tag=connection,scores={path=1}]
+execute at @e[type=area_effect_cloud,tag=entrance] run setblock ~ ~ ~ blue_concrete
+execute at @e[type=area_effect_cloud,tag=connect_me_next] run setblock ~ ~ ~ birch_planks
