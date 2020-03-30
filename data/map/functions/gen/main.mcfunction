@@ -1,7 +1,6 @@
 scoreboard players set z count 0
 scoreboard players set x count 0
 scoreboard players set total room_id 0
-scoreboard players set reset count 0
 scoreboard players operation start_seed random = seed random
 function map:gen/test_room
 kill @e[type=area_effect_cloud,tag=test_room,scores={x=2..4,z=0..1}]
