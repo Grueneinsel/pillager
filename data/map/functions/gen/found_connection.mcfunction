@@ -9,5 +9,4 @@ kill @e[type=area_effect_cloud,tag=pot_connection]
 execute as @e[type=area_effect_cloud,tag=connection,scores={path=1}] at @s rotated as @s positioned ^ ^ ^-6 as @e[type=area_effect_cloud,tag=connection,distance=..7,scores={path=2}] at @s rotated as @s run function map:gen/connect_merge
 tag @s remove connect_me_next
 tag @s remove reconnect_me
-tag @s remove retry
 say Successfully found connection
