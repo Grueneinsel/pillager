@@ -13,4 +13,4 @@ execute as @e[type=area_effect_cloud,tag=normal_room] if score @s room_id = tota
 
 scoreboard players remove total room_id 1
 scoreboard players add rotates count 1
-execute if score rotates count matches 0..3 run scoreboard players set reset count 0
+execute if score rotates count matches 0..3 unless score total room_id matches -1 run scoreboard players set reset count 0
