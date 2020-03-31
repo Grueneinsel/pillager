@@ -12,19 +12,15 @@ execute as @e[type=area_effect_cloud,tag=pot_room] if score @s id = random rando
 scoreboard players add total room_id 1
 scoreboard players operation @s room_id = total room_id
 
-#Number of rooms * 8
-execute if entity @s[tag=2x2] run scoreboard players set limit random 8
-execute if entity @s[tag=2tiles] run scoreboard players set limit random 40
+scoreboard players set limit random 8
 function map:general/seed_random
 
-scoreboard players operation @s type = random random
-scoreboard players operation @s type /= 8 int
 scoreboard players operation @s rotation = random random
 scoreboard players operation @s[tag=2x2] rotation %= 4 int
 scoreboard players operation @s[tag=2tiles] rotation %= 2 int
-scoreboard players operation random random %= 8 int
 execute if score random random matches 4..7 run scoreboard players set @s flip 1
 execute if score random random matches 0..3 run scoreboard players set @s flip 0
+scoreboard players set @s count 5
 
 function map:gen/rotate_room
 
