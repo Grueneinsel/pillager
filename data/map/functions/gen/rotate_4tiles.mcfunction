@@ -8,16 +8,16 @@ execute if score @s rotation matches 4 run scoreboard players add @s flip 1
 execute if score @s flip matches 2 run scoreboard players set @s flip 0
 execute if score @s rotation matches 4 run scoreboard players set @s rotation 0
 
-execute if score @s type matches 0 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"2tiles_0_doors"}
-execute if score @s type matches 1 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"2tiles_1_doors"}
-execute if score @s type matches 2 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"2tiles_2_doors"}
-execute if score @s type matches 3 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"2tiles_3_doors"}
-execute if score @s type matches 4 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"2tiles_4_doors"}
-execute if score @s type matches 5 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"2tiles_5_doors"}
-execute if score @s type matches 6 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"2tiles_6_doors"}
-execute if score @s type matches 7 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"2tiles_7_doors"}
-execute if score @s type matches 8 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"2tiles_8_doors"}
-execute if score @s type matches 9 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"2tiles_9_doors"}
+execute if score @s type matches 0 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"4tiles_0_doors"}
+execute if score @s type matches 1 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"4tiles_1_doors"}
+execute if score @s type matches 2 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"4tiles_2_doors"}
+execute if score @s type matches 3 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"4tiles_3_doors"}
+execute if score @s type matches 4 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"4tiles_4_doors"}
+execute if score @s type matches 5 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"4tiles_5_doors"}
+execute if score @s type matches 6 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"4tiles_6_doors"}
+execute if score @s type matches 7 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"4tiles_7_doors"}
+execute if score @s type matches 8 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"4tiles_8_doors"}
+execute if score @s type matches 9 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"4tiles_9_doors"}
 
 execute if score @s flip matches 1 run data merge block ~ ~ ~ {mirror:"FRONT_BACK"}
 execute if entity @s[scores={rotation=1}] run data merge block ~ ~ ~ {rotation:"CLOCKWISE_90"}
