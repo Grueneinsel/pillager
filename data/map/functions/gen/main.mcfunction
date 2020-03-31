@@ -25,7 +25,6 @@ summon area_effect_cloud 0 5 0 {Tags:["2tiles","2x1","current_room","normal_room
 execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/position_room
 execute as @e[type=area_effect_cloud,tag=entrance] store result score @s x run data get entity @s Pos[0]
 execute as @e[type=area_effect_cloud,tag=entrance] store result score @s z run data get entity @s Pos[2]
-scoreboard players set total room_id -1
 function map:gen/connect
 execute unless entity @p[tag=debug] run function map:gen/finished
 scoreboard players set ttest count 2
