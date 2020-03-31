@@ -12,5 +12,5 @@ kill @e[type=area_effect_cloud,tag=connect_me_next]
 execute as @e[type=area_effect_cloud,tag=normal_room] if score @s room_id = total room_id at @s run function map:gen/rotate_room
 
 scoreboard players remove total room_id 1
-scoreboard players add rotates count 1
-execute if score rotates count matches 0..3 unless score total room_id matches -1 run scoreboard players set reset count 0
+scoreboard players add loops count 1
+execute if score loops count matches 0..4 unless score total room_id matches -1 run scoreboard players set reset count 0
