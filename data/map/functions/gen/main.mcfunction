@@ -27,4 +27,3 @@ execute as @e[type=area_effect_cloud,tag=entrance] store result score @s x run d
 execute as @e[type=area_effect_cloud,tag=entrance] store result score @s z run data get entity @s Pos[2]
 function map:gen/connect
 execute unless entity @p[tag=debug] run function map:gen/finished
-scoreboard players set ttest count 2
