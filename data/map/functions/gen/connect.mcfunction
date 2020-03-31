@@ -1,4 +1,3 @@
-say connect
 scoreboard players add loops count 1
 scoreboard players set total room_id -1
 execute if entity @e[type=area_effect_cloud,tag=entrance,tag=!path_found] run function map:gen/connect_room
