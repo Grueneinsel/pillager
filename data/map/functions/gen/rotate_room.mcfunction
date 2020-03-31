@@ -5,6 +5,7 @@ execute as @e[type=area_effect_cloud,tag=new_entrance] at @s if block ~1 ~ ~ air
 execute as @e[type=area_effect_cloud,tag=new_entrance] at @s if block ~ ~ ~1 air run scoreboard players set @s rotation 0
 execute as @e[type=area_effect_cloud,tag=new_entrance] at @s if block ~-1 ~ ~ air run scoreboard players set @s rotation 1
 execute as @e[type=area_effect_cloud,tag=new_entrance] at @s if block ~ ~ ~-1 air run scoreboard players set @s rotation 2
+execute as @e[type=area_effect_cloud,tag=new_entrance] if score @s room_id = total room_id store result entity @s Rotation[0] float 90 run scoreboard players get @s rotation
 
 execute as @e[type=area_effect_cloud,tag=new_entrance] run scoreboard players operation @s room_id = total room_id
 tag @e[type=area_effect_cloud,tag=new_entrance] remove new_entrance
