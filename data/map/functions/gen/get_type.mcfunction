@@ -24,3 +24,4 @@ execute if score random random matches 8 store result score @s type run data rem
 execute if score random random matches 9 store result score @s type run data remove storage s types[9]
 
 scoreboard players remove types count 1
+scoreboard players set @s count 1
