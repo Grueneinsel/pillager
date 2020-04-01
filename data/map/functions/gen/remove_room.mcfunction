@@ -1,5 +1,5 @@
 say yes
-execute if score total room_id matches 0 run very yes
+execute if score total room_id matches 0 run say very yes
 execute as @e[type=area_effect_cloud,tag=entrance,tag=!door] if score @s room_id = total room_id at @s rotated as @s positioned ^ ^ ^6 run function map:gen/lock_own_paths
 execute as @e[type=area_effect_cloud,tag=connection,scores={path=2}] rotated as @s at @s positioned ^ ^ ^6 run scoreboard players set @e[type=area_effect_cloud,tag=connection,scores={path=3},distance=..7] path 4
 execute at @e[type=area_effect_cloud,tag=connection,scores={path=3}] run setblock ~ ~ ~ air
