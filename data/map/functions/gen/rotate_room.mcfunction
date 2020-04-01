@@ -1,8 +1,8 @@
 execute if entity @s[tag=2tiles] run data modify storage s types set value [0,1,2,3,4]
 execute if entity @s[tag=2tiles] scoreboard players set types count 5
 
-execute if entity @s[tag=2x2] run data modify storage s types set value [0,1,2,3,4,5,6,7,8,9]
-execute if entity @s[tag=2x2] scoreboard players set types count 10
+execute if entity @s[tag=2x2] run data modify storage s types set value [0,1,2,3,4,5]
+execute if entity @s[tag=2x2] scoreboard players set types count 6
 
 execute at @s[tag=2x2] run function map:gen/rotate_4tiles
 execute at @s[tag=2tiles] run function map:gen/rotate_2tiles
