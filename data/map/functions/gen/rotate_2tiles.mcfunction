@@ -10,8 +10,8 @@ execute if score @s flip matches 2 run scoreboard players add @s rotation 1
 execute if score @s flip matches 2 run scoreboard players set @s flip 0
 execute if score @s rotation matches 2 run scoreboard players set @s rotation 0
 
-execute at @s[tag=2x1,scores={type=0,rotation=0}] if block ~ 3 ~ red_concrete run scoreboard players add @s count 1
-execute at @s[tag=2x1,scores={type=0,rotation=0}] if block ~ 3 ~ red_concrete run scoreboard players add @s rotation 1
+execute at @s[tag=2x1,scores={type=0..1,rotation=0}] if block ~ 3 ~ red_concrete run scoreboard players add @s count 1
+execute at @s[tag=2x1,scores={type=0..1,rotation=0}] if block ~ 3 ~ red_concrete run scoreboard players add @s rotation 1
 
 execute if score @s type matches 0 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"2tiles_0_doors"}
 execute if score @s type matches 1 run setblock ~ ~ ~ structure_block{mode:"LOAD",name:"2tiles_3_doors"}
