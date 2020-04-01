@@ -37,7 +37,7 @@ execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/posi
 execute as @e[type=area_effect_cloud,tag=entrance] store result score @s x run data get entity @s Pos[0]
 execute as @e[type=area_effect_cloud,tag=entrance] store result score @s z run data get entity @s Pos[2]
 execute as @e[type=area_effect_cloud,tag=entrance] store result score @s count run data get entity @s Pos[1]
-tag @e[type=area_effect_cloud,tag=entrance,scores={count=5}] add door
-function map:gen/connect
+##tag @e[type=area_effect_cloud,tag=entrance,scores={count=5}] add door
+##function map:gen/connect
 
-execute unless entity @p[tag=debug] run function map:gen/finished
+##execute unless entity @p[tag=debug] run function map:gen/finished
