@@ -9,6 +9,7 @@ scoreboard players operation limit random = total id
 function map:general/seed_random
 execute if score total id matches 0 run kill @s
 execute as @e[type=area_effect_cloud,tag=pot_room] if score @s id = random random run tp @e[type=area_effect_cloud,tag=current_room] @s
+execute at @s[tag=layer2] run tp @s ~ ~9 ~
 scoreboard players add total room_id 1
 scoreboard players operation @s room_id = total room_id
 
