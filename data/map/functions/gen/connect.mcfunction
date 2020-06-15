@@ -9,4 +9,4 @@ execute as @e[type=area_effect_cloud,tag=door,tag=!path_found] at @s rotated as 
 execute as @e[type=area_effect_cloud,tag=door,tag=!path_found] at @s rotated as @s positioned ^6 ^ ^6 if block ~ ~ ~ blue_concrete run tag @s add path_found
 execute as @e[type=area_effect_cloud,tag=door,tag=!path_found] at @s rotated as @s positioned ^-6 ^ ^6 if block ~ ~ ~ blue_concrete run tag @s add path_found
 execute unless entity @e[type=area_effect_cloud,tag=door,tag=!path_found] run tag @e[type=area_effect_cloud,tag=entrance,tag=!path_found] add door
-execute if score loops count matches 0..4 if entity @e[type=area_effect_cloud,tag=door,tag=!path_found] run function map:gen/connect
+execute unless entity @p[tag=debug] if score loops count matches 0..4 if entity @e[type=area_effect_cloud,tag=door,tag=!path_found] run function map:gen/connect
