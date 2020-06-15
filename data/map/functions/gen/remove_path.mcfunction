@@ -13,5 +13,6 @@ execute at @e[type=area_effect_cloud,tag=connection,scores={path=4}] unless bloc
 kill @e[type=area_effect_cloud,tag=connection,scores={path=3}]
 kill @e[type=area_effect_cloud,tag=connection,scores={path=1}]
 execute as @e[type=area_effect_cloud,tag=stair_entrance] if score @s room_id = total room_id run at @s rotated as @s positioned ^ ^ ^7 at @e[type=area_effect_cloud,tag=stair_entrance,distance=..7] run setblock ~ ~ ~ purple_concrete
+execute as @e[type=area_effect_cloud,tag=stair_entrance] if score @s room_id = total room_id run scoreboard players reset @s room_id
 execute at @e[type=area_effect_cloud,tag=door] run setblock ~ ~ ~ blue_concrete
 execute at @e[type=area_effect_cloud,tag=connect_me_next] run setblock ~ ~ ~ birch_planks
