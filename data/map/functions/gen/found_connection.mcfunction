@@ -1,4 +1,4 @@
-execute if entity @p[tag=debug] run say found connection
+execute if entity @p[tag=debugmsg] run say found connection
 execute as @e[type=area_effect_cloud,tag=connect_me] at @s if block ~ ~ ~ blue_concrete run tag @s add blue_block
 tag @e[type=area_effect_cloud,tag=blue_block] add reconnect_me
 execute at @e[type=area_effect_cloud,tag=reconnect_me,sort=furthest,limit=1] run tag @e[type=area_effect_cloud,tag=reconnect_me,distance=1..] remove reconnect_me
