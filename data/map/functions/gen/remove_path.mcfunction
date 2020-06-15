@@ -16,3 +16,5 @@ scoreboard players set @e[type=area_effect_cloud,tag=connection,scores={path=1}]
 scoreboard players set @e[type=area_effect_cloud,tag=connection,scores={path=3}] path 4
 execute at @e[type=area_effect_cloud,tag=door] run setblock ~ ~ ~ blue_concrete
 execute at @e[type=area_effect_cloud,tag=connect_me_next] run setblock ~ ~ ~ birch_planks
+
+##TODO adde stair reset
