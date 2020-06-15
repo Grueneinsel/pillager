@@ -1,5 +1,5 @@
 tag @e[type=area_effect_cloud,tag=pot_room] remove pot_room
-execute if entity @s[tag=2x2] as @e[type=area_effect_cloud,tag=test_room,scores={x=..5,z=3..5}] at @s if block 0 100 0 24 100 24 ~ ~ ~ all run tag @s add pot_room
+execute if entity @s[tag=2x2] as @e[type=area_effect_cloud,tag=test_room,scores={x=..5,z=3..5}] at @s if blocks 0 100 0 24 100 24 ~ ~ ~ all run tag @s add pot_room
 execute if entity @s[tag=1x2] as @e[type=area_effect_cloud,tag=test_room,scores={z=..5}] at @s if blocks 0 100 0 12 100 24 ~ ~ ~ all run tag @s add pot_room
 execute if entity @s[tag=2x1] as @e[type=area_effect_cloud,tag=test_room,scores={x=..5}] at @s if blocks 0 100 0 24 100 12 ~ ~ ~ all run tag @s add pot_room
 execute if entity @s[tag=stairs] as @e[type=area_effect_cloud,tag=test_room,scores={z=3..}] at @s if block ~2 ~ ~2 air positioned ~ ~-9 ~ unless entity @e[type=area_effect_cloud,tag=entrance,dx=12,dz=12,dy=10] run tag @s add pot_room
