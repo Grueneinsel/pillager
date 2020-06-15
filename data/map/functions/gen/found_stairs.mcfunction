@@ -1,9 +1,4 @@
-execute positioned ~6 ~ ~ if block ~ ~ ~ air run summon area_effect_cloud ~ ~ ~ {Tags:["stair_entrance","EG","gen"],Duration:1000000}
-execute positioned ~ ~ ~6 if block ~ ~ ~ air run summon area_effect_cloud ~ ~ ~ {Tags:["stair_entrance","EG","gen"],Duration:1000000}
-execute positioned ~6 ~ ~12 if block ~ ~ ~ air run summon area_effect_cloud ~ ~ ~ {Tags:["stair_entrance","EG","gen"],Duration:1000000}
-execute positioned ~12 ~ ~6 if block ~ ~ ~ air run summon area_effect_cloud ~ ~ ~ {Tags:["stair_entrance","EG","gen"],Duration:1000000}
-execute positioned ~6 ~-9 ~ if block ~ ~ ~ air run summon area_effect_cloud ~ ~ ~ {Tags:["stair_entrance","OG","gen"],Duration:1000000}
-execute positioned ~ ~-9 ~6 if block ~ ~ ~ air run summon area_effect_cloud ~ ~ ~ {Tags:["stair_entrance","OG","gen"],Duration:1000000}
-execute positioned ~6 ~-9 ~12 if block ~ ~ ~ air run summon area_effect_cloud ~ ~ ~ {Tags:["stair_entrance","OG","gen"],Duration:1000000}
-execute positioned ~12 ~-9 ~6 if block ~ ~ ~ air run summon area_effect_cloud ~ ~ ~ {Tags:["stair_entrance","OG","gen"],Duration:1000000}
-execute at @e[type=minecraft:area_effect_cloud,tag=stair_entrance] run setblock ~ ~ ~ minecraft:purple_concrete
+tag @e[type=minecraft:area_effect_cloud,sort=nearest,limit=1] add door
+execute as @e[type=minecraft:area_effect_cloud,sort=nearest,limit=1] if entity @s[tag=EG] at @e[type=area_effect_cloud,tag=stair_entrance,tag=EG] run setblock ~ ~ ~ birch_planks
+execute as @e[type=minecraft:area_effect_cloud,sort=nearest,limit=1] if entity @s[tag=OG] at @e[type=area_effect_cloud,tag=stair_entrance,tag=OG] run setblock ~ ~ ~ birch_planks
+setblock ~ ~ ~ blue_concrete
