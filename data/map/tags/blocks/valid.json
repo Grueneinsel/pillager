@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:air",
-    "minecraft:blue_concrete"
+    "minecraft:blue_concrete",
+    "minecraft:purple_concrete"
   ]
 }
