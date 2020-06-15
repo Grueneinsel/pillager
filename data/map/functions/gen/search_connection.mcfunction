@@ -1,7 +1,6 @@
 execute as @e[type=area_effect_cloud,tag=connect_me,sort=nearest] if score @s turn = total turn at @s run function map:gen/connect_me
 scoreboard players add total turn 1
 
-
 execute at @e[type=area_effect_cloud,tag=latest_connection] if block ~ ~ ~ purple_concrete run function map:gen/found_stairs
 execute at @e[type=area_effect_cloud,tag=latest_connection] if block ~ ~ ~ blue_concrete run tag @s add path_found
 execute at @e[type=area_effect_cloud,tag=latest_connection] unless block ~ ~ ~ blue_concrete run setblock ~ ~ ~ birch_planks
