@@ -1,4 +1,4 @@
-execute positioned ~6 ~ ~ if block ~ ~ ~ air run summon area_effect_cloud ~ ~ ~ {Tags:["stair_entrance","EG","gen"],Duration:1000000,Rotation:[0.0.0,0.0]}
+execute positioned ~6 ~ ~ if block ~ ~ ~ air run summon area_effect_cloud ~ ~ ~ {Tags:["stair_entrance","EG","gen"],Duration:1000000,Rotation:[0.0,0.0]}
 execute positioned ~ ~ ~6 if block ~ ~ ~ air run summon area_effect_cloud ~ ~ ~ {Tags:["stair_entrance","EG","gen"],Duration:1000000,Rotation:[-90.0,0.0]}
 execute positioned ~6 ~ ~12 if block ~ ~ ~ air run summon area_effect_cloud ~ ~ ~ {Tags:["stair_entrance","EG","gen"],Duration:1000000,Rotation:[180.0,0.0]}
 execute positioned ~12 ~ ~6 if block ~ ~ ~ air run summon area_effect_cloud ~ ~ ~ {Tags:["stair_entrance","EG","gen"],Duration:1000000,Rotation:[90.0,0.0]}
