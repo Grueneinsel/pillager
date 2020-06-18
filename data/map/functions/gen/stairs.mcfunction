@@ -10,4 +10,5 @@ execute positioned ~6 ~-5 ~6 run summon area_effect_cloud ~0.5 ~ ~0.5 {Tags:["lu
 execute as @e[type=minecraft:area_effect_cloud,tag=stair_entrance] at @s facing entity @e[type=area_effect_cloud,tag=lukeAtmey] feet run tp @s ~ ~ ~ ~ ~
 execute as @e[type=minecraft:area_effect_cloud,tag=stair_entrance] at @s run tp @s ~ ~ ~ ~ 0
 kill @e[type=area_effect_cloud,tag=lukeAtmey]
-execute at @e[type=minecraft:area_effect_cloud,tag=stair_entrance] run setblock ~ ~ ~ minecraft:purple_concrete
+scoreboard players set @e[type=minecraft:area_effect_cloud,tag=stair_entrance] path 0
+execute at @e[type=minecraft:area_effect_cloud,tag=stair_entrance] run setblock ~ ~ ~ minecraft:birch_planks
