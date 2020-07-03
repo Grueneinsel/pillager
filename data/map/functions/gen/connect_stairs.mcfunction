@@ -1,4 +1,3 @@
-scoreboard players set distance count 200
 scoreboard players set total turn 0
 scoreboard players set retry count 0
 tag @e[type=area_effect_cloud,tag=connect_me] remove connect_me
