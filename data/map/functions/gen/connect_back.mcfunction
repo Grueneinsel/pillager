@@ -5,7 +5,8 @@ execute at @e[type=area_effect_cloud,tag=new_reconnect,sort=furthest,limit=1] ru
 execute positioned ^ ^ ^-6 if block ~ ~ ~ oak_planks run summon area_effect_cloud ~ ~ ~ {Tags:["pot_connection","connection","gen"],Duration:1000000}
 execute positioned ^6 ^ ^ if block ~ ~ ~ oak_planks run summon area_effect_cloud ~ ~ ~ {Tags:["pot_connection","connection","gen"],Duration:1000000}
 execute positioned ^-6 ^ ^ if block ~ ~ ~ oak_planks run summon area_effect_cloud ~ ~ ~ {Tags:["pot_connection","connection","gen"],Duration:1000000}
-execute at @e[type=area_effect_cloud,tag=reconnect_me] run kill @e[type=area_effect_cloud,tag=connection,tag=!reconnect_me,tag=!pot_connection,distance=..1,limit=1]
+
+#execute at @e[type=area_effect_cloud,tag=reconnect_me] run kill @e[type=area_effect_cloud,tag=connection,tag=!reconnect_me,tag=!pot_connection,distance=..1,limit=1]
 scoreboard players set @e[type=area_effect_cloud,tag=reconnect_me] path 1
 scoreboard players set @e[type=area_effect_cloud,tag=pot_connection,tag=!reconnect_me,distance=..7] path 3
 tag @e[type=area_effect_cloud,tag=pot_connection,distance=..7] remove pot_connection
