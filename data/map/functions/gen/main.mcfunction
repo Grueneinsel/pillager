@@ -47,4 +47,4 @@ execute as @e[type=area_effect_cloud,tag=entrance] store result score @s count r
 tag @e[type=area_effect_cloud,tag=entrance,scores={count=5}] add door
 function map:gen/connect
 
-execute unless entity @p[tag=debug] run function map:gen/finished
+##execute unless entity @p[tag=debug] run function map:gen/finished
