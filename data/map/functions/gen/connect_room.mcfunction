@@ -13,7 +13,7 @@ execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s run scoreboard p
 execute as @e[type=area_effect_cloud,tag=connect_me_next] if score @s count matches ..-1 run scoreboard players operation @s count *= -1 int
 
 ##Set doors and prevent rooms to connect to themselves
-execute at @e[type=area_effect_cloud,tag=door] run setblock ~ ~ ~ blue_concrete
+execute at @e[type=area_effect_cloud,tag=door,tag=!path_found] run setblock ~ ~ ~ blue_concrete
 execute at @e[type=area_effect_cloud,tag=connect_me_next] run setblock ~ ~ ~ birch_planks
 execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s positioned ^ ^ ^12 if block ~ ~ ~ air run setblock ~ ~ ~ oak_planks
 execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s positioned ^6 ^ ^6 if block ~ ~ ~ air run setblock ~ ~ ~ oak_planks
