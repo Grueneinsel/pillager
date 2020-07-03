@@ -1,4 +1,5 @@
 execute if entity @p[tag=debugmsg] run say connect room
+
 ##Set previous connections to finished connections
 scoreboard players set reset count 0
 scoreboard players set @e[type=area_effect_cloud,tag=connection,scores={path=1}] path 2
