@@ -10,6 +10,5 @@ kill @e[type=area_effect_cloud,tag=kill_me]
 execute as @e[type=area_effect_cloud,tag=normal_room] if score @s room_id = total room_id at @s run function map:gen/rotate_room
 
 execute as @e[type=area_effect_cloud,tag=entrance] if score @s turn = total turn run tag @s add door
-scoreboard players remove total room_id 1
 scoreboard players add total_reset count 1
 execute if score total_reset count matches 5.. run function map:gen/new_mansion
