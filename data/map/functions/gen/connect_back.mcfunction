@@ -1,3 +1,5 @@
+say test
+setblock ~ ~2 ~ glass
 tag @s remove reconnect_me
 execute as @e[type=area_effect_cloud,tag=pot_connection,distance=..7] run scoreboard players operation total turn < @s turn
 execute as @e[type=area_effect_cloud,tag=pot_connection,distance=..7] if score @s turn = total turn run tag @s add reconnect_me
