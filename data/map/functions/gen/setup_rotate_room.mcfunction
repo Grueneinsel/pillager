@@ -16,3 +16,5 @@ execute if entity @s[tag=2x2] run scoreboard players set types count 6
 execute as @s[tag=2x2] run function map:gen/get_type
 
 scoreboard players set @s count 0
+
+function map:gen/rotate_room
