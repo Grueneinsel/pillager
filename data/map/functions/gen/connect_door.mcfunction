@@ -6,10 +6,9 @@ execute at @e[type=area_effect_cloud,tag=stair_entrance] run setblock ~ ~ ~ birc
 tag @e[type=area_effect_cloud,tag=connect_me] remove connect_me
 
 ##Determine nearest door of a given room
-scoreboard players set distance count 200
-execute as @e[type=area_effect_cloud,tag=connect_me_next] run scoreboard players operation distance count < @s count
-execute as @e[type=area_effect_cloud,tag=connect_me_next] if score @s count = distance count run tag @s add connect_me
-execute at @e[type=area_effect_cloud,tag=connect_me,sort=nearest,limit=1] run tag @e[type=area_effect_cloud,tag=connect_me,distance=1..] remove connect_me
+execute store result score doors count if entity @e[type=area_effect_cloud,tag=connect_me_next]
+execute if score doors count matches 1 run tag @e[type=area_effect_cloud,tag=connect_me_next] add connect_me
+execute if score doors count matches 2.. run function map:gen/nearest_door
 
 ##Setup scores and prepare search for path
 scoreboard players set total turn 0
