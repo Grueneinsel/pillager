@@ -29,3 +29,4 @@ execute as @s[scores={room_id=5}] run data modify storage room5 types set from s
 
 scoreboard players remove @s types 1
 scoreboard players set @s count 1
+say test
