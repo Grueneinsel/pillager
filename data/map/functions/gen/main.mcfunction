@@ -51,4 +51,4 @@ scoreboard players set @e[type=area_effect_cloud,tag=entrance,tag=middle_path] c
 scoreboard players set total room_id -1
 function map:gen/connect_room
 
-##execute unless entity @p[tag=debug] run function map:gen/finished
+execute unless entity @p[tag=debug] run function map:gen/finished
