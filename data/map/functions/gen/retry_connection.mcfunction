@@ -1,3 +1,4 @@
+##Reset path
 execute at @e[type=area_effect_cloud,tag=pot_connection] run setblock ~ ~ ~ air
 kill @e[type=area_effect_cloud,tag=pot_connection]
 scoreboard players set total turn 0
