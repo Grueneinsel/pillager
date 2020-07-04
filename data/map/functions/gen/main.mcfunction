@@ -18,6 +18,7 @@ execute positioned 24 5 6 run scoreboard players set @e[type=area_effect_cloud,t
 #execute positioned 60 14 18 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 3
 #summon area_effect_cloud 24 14 18 {Tags:["entrance","gen"],Duration:1000000}
 #execute positioned 24 14 18 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 1
+execute as @e[type=area_effect_cloud,tag=entrance] store result entity @s Rotation[0] float 90 run scoreboard players get @s rotation
 scoreboard players set @e[type=area_effect_cloud,tag=entrance] room_id 0
 execute at @e[type=area_effect_cloud,tag=entrance] run setblock ~ ~ ~ birch_planks
 
