@@ -45,7 +45,7 @@ execute as @e[type=area_effect_cloud,tag=entrance] store result score @s x run d
 execute as @e[type=area_effect_cloud,tag=entrance] store result score @s z run data get entity @s Pos[2]
 execute as @e[type=area_effect_cloud,tag=entrance] run scoreboard players operation @s taxi_distance = @s x
 execute as @e[type=area_effect_cloud,tag=entrance] run scoreboard players operation @s taxi_distance += @s z
-execute as @e[type=area_effect_cloud,tag=entrance] store result score @s z run data get entity @s Pos[1]
+execute as @e[type=area_effect_cloud,tag=entrance] store result score @s count run data get entity @s Pos[1]
 tag @e[type=area_effect_cloud,tag=entrance,scores={count=5}] add door
 scoreboard players set @e[type=area_effect_cloud,tag=entrance,tag=middle_path] count 200
 scoreboard players set total room_id -1
