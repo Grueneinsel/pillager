@@ -9,5 +9,6 @@ execute if score random random matches 0..3 run scoreboard players set @s flip 0
 
 scoreboard players set @s[tag=!2x2] types 5
 scoreboard players set @s count 0
+function map:gen/get_type
 
 function map:gen/rotate_room
