@@ -9,3 +9,4 @@ execute as @e[type=area_effect_cloud,tag=new_entrance] store result entity @s Ro
 
 execute as @e[type=area_effect_cloud,tag=new_entrance] run scoreboard players operation @s room_id = total room_id
 tag @e[type=area_effect_cloud,tag=new_entrance] remove new_entrance
+execute if entity @e[type=area_effect_cloud,tag=skip] run function map:gen/new_mansion
