@@ -54,6 +54,6 @@ execute as @e[type=area_effect_cloud,tag=entrance] store result score @s count r
 tag @e[type=area_effect_cloud,tag=entrance,scores={count=5}] add door
 scoreboard players set @e[type=area_effect_cloud,tag=entrance,tag=middle_path] count 200
 scoreboard players set total room_id -1
-function map:gen/connect_room
+#function map:gen/connect_room
 
 execute unless entity @p[tag=debug] run function map:gen/finished
