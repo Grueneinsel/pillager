@@ -12,6 +12,6 @@ execute as @e[type=area_effect_cloud,tag=pot_room] if score @s id = random rando
 scoreboard players add total room_id 1
 scoreboard players operation @s room_id = total room_id
 
-execute unless entity @s[tag=stairs] run function map:gen/rotate_room
+execute unless entity @s[tag=stairs] run function map:gen/setup_rotate_room
 
 tag @s remove current_room
