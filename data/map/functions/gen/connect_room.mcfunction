@@ -6,7 +6,7 @@ scoreboard players set @e[type=area_effect_cloud,tag=connection,scores={path=1}]
 scoreboard players set @e[type=area_effect_cloud,tag=connection,scores={path=3}] path 4
 
 ##Determine taxi distance to nearest door with room of the lowest id
-scoreboard players add total room_id 1
+scoreboard players set total room_id 10
 execute as @e[type=area_effect_cloud,tag=door,tag=!path_found] if score @s room_id < total room_id run scoreboard players operation total room_id < @s room_id
 execute as @e[type=area_effect_cloud,tag=door,tag=!path_found] if score @s room_id = total room_id run tag @s add connect_me_next
 execute as @e[type=area_effect_cloud,tag=connect_me_next,tag=!middle_path] run scoreboard players operation @s count = @s taxi_distance
