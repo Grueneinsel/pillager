@@ -1,6 +1,6 @@
 scoreboard players add loops count 1
 scoreboard players set total room_id -1
-execute if score loops count matches 5.. run function map:gen/reset_room
+execute if score loops count matches 5.. run function map:gen/new_mansion
 
 execute if score loops count matches 0..4 if entity @e[type=area_effect_cloud,tag=door,tag=!path_found] run function map:gen/connect_room
 
