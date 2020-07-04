@@ -46,7 +46,7 @@ execute as @e[type=area_effect_cloud,tag=entrance] store result score @s z run d
 execute as @e[type=area_effect_cloud,tag=entrance] run scoreboard players operation @s taxi_distance = @s x
 execute as @e[type=area_effect_cloud,tag=entrance] run scoreboard players operation @s taxi_distance += @s z
 scoreboard players set @e[type=area_effect_cloud,tag=entrance,tag=middle_path] count 200
-tag @e[type=area_effect_cloud,tag=entrance,scores={count=5}] add door
+tag @e[type=area_effect_cloud,tag=entrance] add door
 function map:gen/connect
 
 ##execute unless entity @p[tag=debug] run function map:gen/finished
