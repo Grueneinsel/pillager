@@ -49,3 +49,4 @@ scoreboard objectives add room_id dummy
 scoreboard objectives add turn dummy
 scoreboard objectives add path dummy
 scoreboard objectives add taxi_distance dummy
+scoreboard objectives add types dummy
