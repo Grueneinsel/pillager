@@ -15,4 +15,4 @@ tag @e[type=area_effect_cloud,tag=latest_connection] remove latest_connection
 
 execute if entity @e[type=area_effect_cloud,tag=blue_block] run function map:gen/found_connection
 execute if score reset count matches 0..2 unless entity @s[tag=path_found] unless entity @e[type=area_effect_cloud,tag=connect_me] run function map:gen/retry_connection
-execute if score reset count matches 0..2 unless entity @s[tag=path_found] if entity @e[type=area_effect_cloud,tag=connect_me] run function map:gen/search_connection
+execute if score reset count matches 0..2 unless entity @s[tag=path_found] if entity @e[type=area_effect_cloud,tag=connect_me] unless entity @p[tag=debug_me] run function map:gen/search_connection
