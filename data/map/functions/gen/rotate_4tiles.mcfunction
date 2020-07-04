@@ -27,4 +27,4 @@ setblock ~1 ~ ~ redstone_block
 
 execute at @e[type=area_effect_cloud,tag=new_entrance] unless block ~ 4 ~ red_concrete run tag @s add skip
 
-execute if entity @s[tag=skip] run function map:gen/rotate_4tiles
+execute if entity @s[tag=skip] unless score @s types matches 0 run function map:gen/rotate_4tiles
