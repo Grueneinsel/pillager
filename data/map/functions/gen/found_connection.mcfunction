@@ -13,7 +13,7 @@ execute as @e[type=area_effect_cloud,tag=reconnect_me] at @s rotated as @s posit
 
 ##Clean up
 kill @e[type=area_effect_cloud,tag=blue_block]
-#execute at @e[type=area_effect_cloud,tag=pot_connection] run setblock ~ ~ ~ air
+execute at @e[type=area_effect_cloud,tag=pot_connection] run setblock ~ ~ ~ air
 #kill @e[type=area_effect_cloud,tag=pot_connection]
 tag @s remove connect_me_next
 tag @s remove reconnect_me
