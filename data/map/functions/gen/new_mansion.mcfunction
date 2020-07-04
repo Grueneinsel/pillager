@@ -11,4 +11,4 @@ execute if score total room_id matches 0 as @e[type=area_effect_cloud,tag=normal
 
 scoreboard players remove total room_id 1
 scoreboard players add loops count 1
-execute if score loops count matches 0..4 run scoreboard players set reset count 0
+execute if score loops count matches 5.. run function map:gen/new_mansion
