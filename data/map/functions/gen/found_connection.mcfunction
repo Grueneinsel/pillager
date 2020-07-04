@@ -17,3 +17,4 @@ kill @e[type=area_effect_cloud,tag=blue_block]
 kill @e[type=area_effect_cloud,tag=pot_connection]
 tag @s remove connect_me_next
 tag @s remove reconnect_me
+tag @e[type=area_effect_cloud,tag=connected_to_current_room] remove connected_to_current_room
