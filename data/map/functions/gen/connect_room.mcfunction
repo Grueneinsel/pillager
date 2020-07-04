@@ -23,5 +23,5 @@ execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s po
 execute if entity @e[type=area_effect_cloud,tag=connect_me_next] run function map:gen/connect_door
 
 ##
-execute if score reset count matches 3 run function map:gen/remove_room
+execute if score reset count matches 3 run function map:gen/reset_room
 execute unless entity @p[tag=debug] if score reset count matches 0..2 if entity @e[type=area_effect_cloud,tag=door,tag=!path_found] run function map:gen/connect_room
