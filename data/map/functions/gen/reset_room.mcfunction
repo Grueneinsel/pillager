@@ -1,3 +1,4 @@
+execute if entity @p[tag=debugmsg] run say Reset Roomvvvvvv
 execute if entity @e[type=area_effect_cloud,tag=connection,scores={path=3}] run function map:gen/remove_path
 
 execute as @e[type=area_effect_cloud,tag=entrance] if score @s room_id = total room_id run tag @s add kill_me
