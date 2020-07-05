@@ -8,10 +8,10 @@ execute unless entity @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scor
 scoreboard players set @e[type=area_effect_cloud,tag=connect_me] turn 0
 execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=14}] at @s rotated as @s positioned ^ ^-9 ^6 run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..7] turn 1
 execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=14}] at @s rotated as @s positioned ^ ^-9 ^12 run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..1] turn 0
-execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=14}] at @s rotated as @s positioned ~ ~-9 ~ run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..1] turn 4
+execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=14}] at @s rotated as @s positioned ~ ~-9 ~ run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..1] turn 6
 execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=5}] at @s rotated as @s positioned ^ ^9 ^6 run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..7] turn 1
 execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=5}] at @s rotated as @s positioned ^ ^9 ^12 run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..1] turn 0
-execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=5}] at @s rotated as @s positioned ~ ~9 ~ run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..1] turn 4
+execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=5}] at @s rotated as @s positioned ~ ~9 ~ run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..1] turn 6
 tag @e[type=area_effect_cloud,tag=stair_entrance,tag=connect_me,scores={turn=0},limit=1,sort=furthest] add center_stair
 execute unless entity @e[type=area_effect_cloud,tag=center_stair] run tag @e[type=area_effect_cloud,tag=stair_entrance,tag=connect_me,limit=1,sort=furthest] add center_stair
 
