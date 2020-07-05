@@ -19,3 +19,5 @@ execute if score retry count matches 3 at @e[type=area_effect_cloud,tag=connecti
 
 execute if entity @p[tag=debugmsg] if score retry count matches 4 run say Retry 4 (This layout is impossible)
 execute if score retry count matches 4 run scoreboard players set reset count 3
+
+tag @p[tag=debug] add debug_me
