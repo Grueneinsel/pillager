@@ -18,3 +18,6 @@ execute at @e[type=area_effect_cloud,tag=stair_entrance,tag=connect_me,scores={t
 execute unless entity @e[type=area_effect_cloud,tag=found_it] as @e[type=area_effect_cloud,tag=connect_me,scores={turn=0},limit=1,sort=furthest] at @s run function map:gen/search_connection
 execute as @e[type=area_effect_cloud,tag=connect_me] at @s if block ~ ~ ~ glass run tag @s add found_it
 execute at @e[type=area_effect_cloud,tag=stair_entrance,tag=connect_me,scores={turn=0}] as @e[type=area_effect_cloud,tag=stair_entrance,tag=found_it,limit=1,sort=furthest] at @s run function map:gen/found_stairs
+
+tag @e[type=area_effect_cloud,tag=connect_me] remove connect_me
+execute if entity @e[type=area_effect_cloud,tag=stair_entrance,scores={path=0}] run function function map:gen/connect_stairs
