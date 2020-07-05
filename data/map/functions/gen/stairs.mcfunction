@@ -14,5 +14,4 @@ execute as @e[type=minecraft:area_effect_cloud,tag=stair_entrance] at @s facing 
 execute as @e[type=minecraft:area_effect_cloud,tag=stair_entrance] at @s run tp @s ~ ~ ~ ~180 0
 kill @e[type=area_effect_cloud,tag=lukeAtmey]
 scoreboard players set @e[type=minecraft:area_effect_cloud,tag=stair_entrance] path 0
-execute at @e[type=minecraft:area_effect_cloud,tag=stair_entrance] run setblock ~ ~ ~ minecraft:blue_concrete
 execute as @e[type=area_effect_cloud,tag=stair_entrance] store result score @s y run data get entity @s Pos[1]
