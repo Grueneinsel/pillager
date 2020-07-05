@@ -41,10 +41,10 @@ summon area_effect_cloud 0 5 0 {Tags:["2tiles","2x1","current_room","normal_room
 execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/position_room
 summon area_effect_cloud 0 5 0 {Tags:["stairs","current_room","gen"],Duration:1000000}
 execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/position_room
+execute as @e[type=area_effect_cloud,tag=stairs] at @s run function map:gen/stairs
 setblock 30 14 24 birch_planks
 setblock 54 14 24 birch_planks
 setblock 42 14 24 birch_planks
-#execute as @e[type=area_effect_cloud,tag=stairs] at @s run function map:gen/stairs
 
 execute as @e[type=area_effect_cloud,tag=entrance] store result score @s x run data get entity @s Pos[0]
 execute as @e[type=area_effect_cloud,tag=entrance] store result score @s z run data get entity @s Pos[2]
