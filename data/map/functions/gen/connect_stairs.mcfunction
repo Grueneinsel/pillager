@@ -13,7 +13,7 @@ execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=5}] a
 execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=5}] at @s rotated as @s positioned ^ ^9 ^12 run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..1] turn 0
 execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=5}] at @s rotated as @s positioned ~ ~9 ~ run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..1] turn 4
 tag @e[type=area_effect_cloud,tag=stair_entrance,tag=connect_me,scores={turn=0},limit=1,sort=furthest] add center_stair
-execute unless entity @e[type=area_effect_cloud,tag=center_stair] run tag @e[type=area_effect_cloud,tag=stair_entrance,tag=connect_me] add center_stair
+execute unless entity @e[type=area_effect_cloud,tag=center_stair] run tag @e[type=area_effect_cloud,tag=stair_entrance,tag=connect_me,limit=1,sort=furthest] add center_stair
 
 scoreboard players set total turn 0
 scoreboard players set retry count 0
