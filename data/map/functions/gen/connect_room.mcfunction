@@ -25,7 +25,8 @@ execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s po
 execute if entity @e[type=area_effect_cloud,tag=connect_me_next] run function map:gen/connect_door
 
 ##If there is no door add the second layer then the stairs
-execute unless entity @e[type=area_effect_cloud,tag=door,tag=!path_found] run tag @e[type=area_effect_cloud,tag=entrance,tag=!path_found] add door
+execute unless entity @e[type=area_effect_cloud,tag=door,tag=!path_found] run scoreboard players set current y 14
+execute unless entity @e[type=area_effect_cloud,tag=door,tag=!path_found] run tag @e[type=area_effect_cloud,tag=entrance,scores={y=14}] add door
 execute unless entity @e[type=area_effect_cloud,tag=door,tag=!path_found] run say only stairs are missing
 
 ##Loop through rooms
