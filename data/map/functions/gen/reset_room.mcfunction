@@ -1,4 +1,5 @@
-execute if entity @p[tag=debugmsg] run say Reset Room
+#execute if entity @p[tag=debugmsg] run say Reset Room
+say Reset Room
 execute if entity @e[type=area_effect_cloud,tag=connection,scores={path=3}] run function map:gen/remove_path
 
 execute if score total room_id matches 0 run scoreboard players operation total room_id = @e[type=area_effect_cloud,tag=normal_room,limit=1,sort=nearest] room_id
