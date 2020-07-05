@@ -12,8 +12,8 @@ execute if score retry count matches 1 as @e[type=area_effect_cloud,tag=door,tag
 execute if score retry count matches 2 unless entity @e[type=area_effect_cloud,tag=connection,scores={path=3}] run scoreboard players set retry count 4
 execute if entity @p[tag=debugmsg] if score retry count matches 2 run say Retry 2 (remove other path from this room)
 execute if score retry count matches 2 run scoreboard players add reset count 1
-execute if score retry count matches 2 if score reset count matches 0..2 run say it's reset time
-execute if score retry count matches 2 unless score reset count matches 0..2 run function map:gen/remove_path
+execute if score retry count matches 2 unless score reset count matches 0..2 run say it's reset time
+execute if score retry count matches 2 if score reset count matches 0..2 run function map:gen/remove_path
 
 execute if entity @p[tag=debugmsg] if score retry count matches 3 run say Retry 3 (again with connection to other paths)
 execute if score retry count matches 3 at @e[type=area_effect_cloud,tag=connection,scores={path=4}] unless block ~ ~ ~ oak_planks run setblock ~ ~ ~ blue_concrete
