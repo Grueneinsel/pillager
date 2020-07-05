@@ -1,6 +1,6 @@
 ##Keep walls from other paths
 execute as @e[type=area_effect_cloud,tag=connection,scores={path=2}] rotated as @s at @s positioned ^ ^ ^6 run scoreboard players set @e[type=area_effect_cloud,tag=connection,scores={path=3},distance=..7] path 4
-execute as @e[type=area_effect_cloud,tag=door,tag=path_found] unless score @s room_id = total room_id rotated as @s at @s positioned ^ ^ ^6 run scoreboard players set @e[type=area_effect_cloud,tag=connection,scores={path=3},distance=..7] path 4
+execute as @e[type=area_effect_cloud,tag=door,tag=path_found,tag=!connected_to_current_room] unless score @s room_id = total room_id rotated as @s at @s positioned ^ ^ ^6 run scoreboard players set @e[type=area_effect_cloud,tag=connection,scores={path=3},distance=..7] path 4
 execute at @e[type=area_effect_cloud,tag=connection,scores={path=4}] unless block ~ ~ ~ oak_planks run setblock ~ ~ ~ birch_planks
 
 ##Remove old path
