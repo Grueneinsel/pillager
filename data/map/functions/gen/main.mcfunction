@@ -4,7 +4,6 @@ scoreboard players set z count 0
 scoreboard players set x count 0
 scoreboard players set total room_id 0
 scoreboard players set total_reset count 0
-scoreboard players set current y 5
 scoreboard players operation start_seed random = seed random
 function map:gen/test_room
 kill @e[type=area_effect_cloud,tag=test_room,scores={x=2..4,z=0..1}]
@@ -53,6 +52,7 @@ execute as @e[type=area_effect_cloud,tag=entrance] run scoreboard players operat
 execute as @e[type=area_effect_cloud,tag=entrance] run scoreboard players operation @s taxi_distance += @s z
 execute as @e[type=area_effect_cloud,tag=entrance] store result score @s y run data get entity @s Pos[1]
 tag @e[type=area_effect_cloud,tag=entrance,scores={y=5}] add door
+scoreboard players set current y 5
 scoreboard players set @e[type=area_effect_cloud,tag=entrance,tag=middle_path] count 200
 scoreboard players set total room_id -1
 function map:gen/connect_room
