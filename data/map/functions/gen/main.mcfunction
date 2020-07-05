@@ -2,7 +2,7 @@ function map:gen/reset_mansion
 title @a actionbar ["",{"score":{"name":"seed","objective":"random"},"color":"gold"}]
 scoreboard players set z count 0
 scoreboard players set x count 0
-scoreboard players set total room_id 0
+scoreboard players set total room_id 1
 scoreboard players set total_reset count 0
 scoreboard players operation start_seed random = seed random
 function map:gen/test_room
