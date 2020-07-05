@@ -12,5 +12,5 @@ execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=5}] a
 scoreboard players set total turn 0
 scoreboard players set retry count 0
 execute as @e[type=area_effect_cloud,tag=connect_me] at @s if block ~ ~ ~ blue_concrete run tag @s add blue_block
-execute if entity @e[type=area_effect_cloud,tag=blue_block] at @e[type=area_effect_cloud,tag=stair_entrance,scores={turn=3}] run function map:gen/found_connection
-execute unless entity @e[type=area_effect_cloud,tag=blue_block] as @e[type=area_effect_cloud,tag=connect_me] at @s run function map:gen/search_connection
+execute at @e[type=area_effect_cloud,tag=stair_entrance,tag=connect_me,scores={turn=0}] as @e[type=area_effect_cloud,tag=stair_entrance,tag=blue_block,limit=1,sort=nearest] at @s run function map:gen/found_stairs
+execute unless entity @e[type=area_effect_cloud,tag=blue_block] as @e[type=area_effect_cloud,tag=connect_me,scores={turn=0}] at @s run function map:gen/search_connection
