@@ -14,10 +14,10 @@ summon area_effect_cloud 42 5 24 {Tags:["entrance","gen","middle_path"],Duration
 execute positioned 42 5 24 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 0
 summon area_effect_cloud 24 5 6 {Tags:["entrance","gen"],Duration:1000000}
 execute positioned 24 5 6 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 1
-#summon area_effect_cloud 60 14 18 {Tags:["entrance","gen"],Duration:1000000}
-#execute positioned 60 14 18 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 3
-#summon area_effect_cloud 24 14 18 {Tags:["entrance","gen"],Duration:1000000}
-#execute positioned 24 14 18 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 1
+summon area_effect_cloud 60 14 18 {Tags:["entrance","gen"],Duration:1000000}
+execute positioned 60 14 18 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 3
+summon area_effect_cloud 24 14 18 {Tags:["entrance","gen"],Duration:1000000}
+execute positioned 24 14 18 run scoreboard players set @e[type=area_effect_cloud,tag=entrance,limit=1,sort=nearest] rotation 1
 execute as @e[type=area_effect_cloud,tag=entrance] store result entity @s Rotation[0] float 90 run scoreboard players get @s rotation
 scoreboard players set @e[type=area_effect_cloud,tag=entrance] room_id 0
 execute at @e[type=area_effect_cloud,tag=entrance] run setblock ~ ~ ~ birch_planks
@@ -34,13 +34,13 @@ data modify storage room3 types set value [0,1,2,3,4]
 execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/position_room
 
 
-#execute as @e[tag=test_room] at @s run tp @s ~ ~9 ~
-#summon area_effect_cloud 0 5 0 {Tags:["2tiles","1x2","current_room","normal_room","gen"],Duration:1000000}
-#execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/position_room
-#summon area_effect_cloud 0 5 0 {Tags:["2tiles","2x1","current_room","normal_room","gen"],Duration:1000000}
-#execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/position_room
-#summon area_effect_cloud 0 5 0 {Tags:["stairs","current_room","gen"],Duration:1000000}
-#execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/position_room
+execute as @e[tag=test_room] at @s run tp @s ~ ~9 ~
+summon area_effect_cloud 0 5 0 {Tags:["2tiles","1x2","current_room","normal_room","gen"],Duration:1000000}
+execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/position_room
+summon area_effect_cloud 0 5 0 {Tags:["2tiles","2x1","current_room","normal_room","gen"],Duration:1000000}
+execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/position_room
+summon area_effect_cloud 0 5 0 {Tags:["stairs","current_room","gen"],Duration:1000000}
+execute as @e[type=area_effect_cloud,tag=current_room] run function map:gen/position_room
 setblock 30 14 24 birch_planks
 setblock 54 14 24 birch_planks
 setblock 42 14 24 birch_planks
