@@ -3,7 +3,7 @@ execute if entity @p[tag=debugmsg] run say connect door
 ##Set walls of other paths
 execute at @e[type=area_effect_cloud,tag=connection,scores={path=3..4}] run setblock ~ ~ ~ birch_planks
 execute at @e[type=area_effect_cloud,tag=stair_entrance,scores={path=2}] run setblock ~ ~ ~ birch_planks
-execute at @e[type=area_effect_cloud,tag=stair_entrance,scores={path=0}] run setblock ~ ~ ~ blue_concrete
+execute at @e[type=area_effect_cloud,tag=stair_entrance,scores={path=0}] run setblock ~ ~ ~ birch_planks
 tag @e[type=area_effect_cloud,tag=connect_me] remove connect_me
 
 ##Determine nearest door of a given room
