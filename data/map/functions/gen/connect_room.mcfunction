@@ -4,6 +4,7 @@ execute if entity @p[tag=debugmsg] run say connect room
 scoreboard players set reset count 0
 scoreboard players set @e[type=area_effect_cloud,tag=connection,scores={path=1}] path 2
 scoreboard players set @e[type=area_effect_cloud,tag=connection,scores={path=3}] path 4
+execute at @e[type=area_effect_cloud,tag=door] run setblock ~ ~ ~ blue_concrete
 
 ##Determine taxi distance to nearest door with room of the lowest id
 scoreboard players set total room_id 10
