@@ -7,4 +7,4 @@ scoreboard players add total turn 1
 execute as @e[type=area_effect_cloud,tag=latest_connection] at @s run function map:gen/rotate_aec
 
 execute if entity @e[type=area_effect_cloud,tag=blue_block] run function map:gen/stair_success
-execute unless entity @s[tag=reconnect_me] if entity @e[type=area_effect_cloud,tag=connect_me] run function map:gen/stair_search
+execute unless entity @e[type=area_effect_cloud,tag=reconnect_me] if entity @e[type=area_effect_cloud,tag=connect_me] run function map:gen/stair_search
