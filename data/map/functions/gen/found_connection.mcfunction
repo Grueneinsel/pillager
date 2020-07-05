@@ -21,4 +21,3 @@ kill @e[type=area_effect_cloud,tag=pot_connection]
 tag @s remove connect_me_next
 tag @s remove reconnect_me
 tag @s remove debug_aec
-tag @e[type=area_effect_cloud,tag=connected_to_current_room] remove connected_to_current_room
