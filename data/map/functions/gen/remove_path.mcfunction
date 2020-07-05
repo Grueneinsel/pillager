@@ -12,9 +12,9 @@ execute as @e[type=area_effect_cloud,tag=stair_entrance,scores={path=1}] if scor
 ##Reset other door
 execute as @e[type=area_effect_cloud,tag=door] if score @s room_id = total room_id run tag @s add connect_me_next
 tag @e[type=area_effect_cloud,tag=connect_me_next] remove path_found
-execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s positioned ^ ^ ^12 if block ~ ~ ~ air run setblock ~ ~ ~ oak_planks
-execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s positioned ^6 ^ ^6 if block ~ ~ ~ air run setblock ~ ~ ~ oak_planks
-execute as @e[type=area_effect_cloud,tag=connect_me_next] at @s rotated as @s positioned ^-6 ^ ^6 if block ~ ~ ~ air run setblock ~ ~ ~ oak_planks
+execute as @e[type=area_effect_cloud,tag=connect_me_next,tag=!connect_me] at @s rotated as @s positioned ^ ^ ^12 if block ~ ~ ~ air run setblock ~ ~ ~ oak_planks
+execute as @e[type=area_effect_cloud,tag=connect_me_next,tag=!connect_me] at @s rotated as @s positioned ^6 ^ ^6 if block ~ ~ ~ air run setblock ~ ~ ~ oak_planks
+execute as @e[type=area_effect_cloud,tag=connect_me_next,tag=!connect_me] at @s rotated as @s positioned ^-6 ^ ^6 if block ~ ~ ~ air run setblock ~ ~ ~ oak_planks
 
 ##Reset all doors that were connected
 tag @e[type=area_effect_cloud,tag=door,tag=connected_to_current_room] remove path_found
