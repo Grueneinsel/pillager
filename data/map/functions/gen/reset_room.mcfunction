@@ -14,4 +14,5 @@ execute as @e[type=area_effect_cloud,tag=normal_room] if score @s room_id = tota
 
 execute as @e[type=area_effect_cloud,tag=entrance] if score @s turn = total turn run tag @s add door
 scoreboard players add total_reset count 1
+scoreboard players set reset count 0
 execute if score total_reset count matches 5.. run function map:gen/new_mansion
