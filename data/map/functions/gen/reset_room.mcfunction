@@ -7,6 +7,8 @@ execute as @e[type=area_effect_cloud,tag=kill_me] at @s rotated as @s positioned
 execute as @e[type=area_effect_cloud,tag=kill_me] at @s rotated as @s positioned ^-6 ^ ^6 if block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
 kill @e[type=area_effect_cloud,tag=kill_me]
 
+execute if score total roóm_id matches 0 run scoreboard players operation total room_id = @e[type=area_effect_cloud,tag=normal_room,limit=1,sort=nearest] room_id
+
 execute as @e[type=area_effect_cloud,tag=normal_room] if score @s room_id = total room_id at @s run function map:gen/rotate_room
 
 execute as @e[type=area_effect_cloud,tag=entrance] if score @s turn = total turn run tag @s add door
