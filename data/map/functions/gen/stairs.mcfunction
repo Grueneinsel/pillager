@@ -6,6 +6,9 @@ execute positioned ~6 ~-9 ~ if block ~ ~ ~ air run summon area_effect_cloud ~0.5
 execute positioned ~ ~-9 ~6 if block ~ ~ ~ air run summon area_effect_cloud ~0.5 ~ ~0.5 {Tags:["stair_entrance","gen"],Duration:1000000}
 execute positioned ~6 ~-9 ~12 if block ~ ~ ~ air run summon area_effect_cloud ~0.5 ~ ~0.5 {Tags:["stair_entrance","gen"],Duration:1000000}
 execute positioned ~12 ~-9 ~6 if block ~ ~ ~ air run summon area_effect_cloud ~0.5 ~ ~0.5 {Tags:["stair_entrance","gen"],Duration:1000000}
+execute as @e[type=minecraft:area_effect_cloud,tag=stair_entrance] at @s unless block ~ ~ ~ #map:valid run tag @s add kill_me
+execute as @e[type=minecraft:area_effect_cloud,tag=stair_entrance] at @s unless block ~ 4 ~ red_concrete run tag @s add kill_me
+kill @e[type=minecraft:area_effect_cloud,tag=kill_me]
 execute positioned ~6 ~-5 ~6 run summon area_effect_cloud ~0.5 ~ ~0.5 {Tags:["lukeAtmey"],Duration:10}
 execute as @e[type=minecraft:area_effect_cloud,tag=stair_entrance] at @s facing entity @e[type=area_effect_cloud,tag=lukeAtmey] feet run tp @s ~ ~ ~ ~ ~
 execute as @e[type=minecraft:area_effect_cloud,tag=stair_entrance] at @s run tp @s ~ ~ ~ ~180 0
