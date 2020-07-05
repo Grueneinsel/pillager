@@ -25,4 +25,4 @@ execute as @e[type=area_effect_cloud,tag=connect_me] at @s if block ~ ~ ~ glass 
 execute at @e[type=area_effect_cloud,tag=center_stair] as @e[type=area_effect_cloud,tag=stair_entrance,tag=found_it,limit=1,sort=furthest] at @s run function map:gen/found_stairs
 
 tag @e[type=area_effect_cloud,tag=center_stair] remove center_stair
-execute if entity @e[type=area_effect_cloud,tag=stair_entrance,scores={path=0}] run function function map:gen/connect_stairs
+execute if entity @e[type=area_effect_cloud,tag=stair_entrance,scores={path=0}] run function map:gen/connect_stairs
