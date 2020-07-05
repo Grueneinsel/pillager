@@ -9,6 +9,7 @@ execute as @e[type=area_effect_cloud,tag=remove_wood] at @s rotated as @s positi
 execute as @e[type=area_effect_cloud,tag=remove_wood] at @s rotated as @s positioned ^-6 ^ ^6 if block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
 
 execute if score total room_id matches 0 run scoreboard players operation total room_id = @e[type=area_effect_cloud,tag=normal_room,limit=1,sort=nearest] room_id
+execute if score total room_id matches 1 run scoreboard players set current y 5
 execute as @e[type=area_effect_cloud,tag=entrance] if score @s room_id = total room_id run kill @s
 tag @e[type=area_effect_cloud,tag=remove_wood] remove remove_wood
 
