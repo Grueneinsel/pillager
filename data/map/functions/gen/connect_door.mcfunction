@@ -14,6 +14,7 @@ execute if score doors count matches 2.. run function map:gen/nearest_door
 scoreboard players set total turn 0
 scoreboard players set retry count 0
 scoreboard players set @e[type=area_effect_cloud,tag=connect_me] turn 0
+tag @e[type=area_effect_cloud,tag=connect_me] add debug_aec
 execute as @e[type=area_effect_cloud,tag=connect_me] at @s rotated as @s positioned ^ ^ ^12 if block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
 execute as @e[type=area_effect_cloud,tag=connect_me] at @s rotated as @s positioned ^6 ^ ^6 if block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
 execute as @e[type=area_effect_cloud,tag=connect_me] at @s rotated as @s positioned ^-6 ^ ^6 if block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
