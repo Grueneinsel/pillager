@@ -5,6 +5,7 @@ execute at @e[type=area_effect_cloud,tag=connection,scores={path=4}] unless bloc
 
 ##Remove old path
 execute at @e[type=area_effect_cloud,tag=connection,scores={path=3}] unless block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
+execute at @e[type=area_effect_cloud,tag=connection,scores={path=1}] run setblock ~ ~ ~ air
 kill @e[type=area_effect_cloud,tag=connection,scores={path=3}]
 kill @e[type=area_effect_cloud,tag=connection,scores={path=1}]
 execute as @e[type=area_effect_cloud,tag=stair_entrance,scores={path=1}] if score @s room_id = total room_id at @s rotated as @s positioned ^ ^ ^7 run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..7] path 0
