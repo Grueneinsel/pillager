@@ -7,7 +7,7 @@ tag @s add connect_me
 
 execute if entity @p[tag=debugmsg] if score retry count matches 1 run say Retry 1 (allow connection to other paths)
 execute if score retry count matches 1 at @e[type=area_effect_cloud,tag=connection,scores={path=4}] unless block ~ ~ ~ oak_planks run setblock ~ ~ ~ blue_concrete
-execute if score retry count matches 1 as @e[type=area_effect_cloud,tag=door,tag=!connect_me] if score @s room_id = total room_id at @s rotated as @s positioned ^ ^ ^6 run function map:gen/lock_own_paths
+execute if score retry count matches 1 as @e[type=area_effect_cloud,tag=door,tag=!connect_me] if score @s room_id = total room_id if score @s y = current y at @s rotated as @s positioned ^ ^ ^6 run function map:gen/lock_own_paths
 
 execute if score retry count matches 2 unless entity @e[type=area_effect_cloud,tag=connection,scores={path=3}] run scoreboard players set retry count 4
 execute if entity @p[tag=debugmsg] if score retry count matches 2 run say Retry 2 (remove other path from this room)
