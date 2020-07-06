@@ -1,4 +1,5 @@
 ##AEC is happy that he found a connection
+say success
 tag @e[type=area_effect_cloud,tag=blue_block] add reconnect_me
 execute at @e[type=area_effect_cloud,tag=reconnect_me,sort=furthest,limit=1] run tag @e[type=area_effect_cloud,tag=reconnect_me,distance=1..] remove reconnect_me
 execute at @e[type=area_effect_cloud,tag=reconnect_me] run scoreboard players set @e[type=area_effect_cloud,tag=connection,distance=..1,scores={path=4}] path 1
