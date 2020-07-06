@@ -4,7 +4,7 @@ execute at @e[type=area_effect_cloud,tag=reconnect_me,sort=furthest,limit=1] run
 execute at @e[type=area_effect_cloud,tag=reconnect_me] run scoreboard players set @e[type=area_effect_cloud,tag=connection,distance=..1,scores={path=4}] path 1
 execute at @e[type=area_effect_cloud,tag=reconnect_me] run setblock ~ ~ ~ glass
 tag @s add pot_connection
-execute as @e[type=area_effect_cloud,tag=reconnect_me] at @s rotated as @s positioned ^ ^ ^-6 run function map:gen/connect_back
+execute as @e[type=area_effect_cloud,tag=reconnect_me,tag=!stair_entrance] at @s rotated as @s positioned ^ ^ ^-6 run function map:gen/connect_back
 
 ##Clean up
 kill @e[type=area_effect_cloud,tag=blue_block,tag=!stair_entrance]
