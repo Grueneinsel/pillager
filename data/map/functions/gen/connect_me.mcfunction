@@ -6,3 +6,4 @@ execute rotated as @s positioned ^-6 ^ ^6 if block ~ 4 ~ red_concrete if block ~
 scoreboard players operation @e[type=area_effect_cloud,tag=new_connection] rotation = @s rotation
 scoreboard players operation @e[type=area_effect_cloud,tag=new_connection] turn = @s turn
 tag @e[type=area_effect_cloud,tag=new_connection] remove new_connection
+say connect_me
