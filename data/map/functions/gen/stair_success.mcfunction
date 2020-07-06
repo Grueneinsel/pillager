@@ -8,6 +8,6 @@ execute as @e[type=area_effect_cloud,tag=reconnect_me,tag=!stair_entrance] at @s
 ##Clean up
 kill @e[type=area_effect_cloud,tag=blue_block,tag=!stair_entrance]
 tag @e[type=area_effect_cloud,tag=blue_block] remove blue_block
-execute at @e[type=area_effect_cloud,tag=pot_connection] run setblock ~ ~ ~ air
+execute at @e[type=area_effect_cloud,tag=pot_connection,tag=!stair_entrance] run setblock ~ ~ ~ air
 kill @e[type=area_effect_cloud,tag=pot_connection,tag=!stair_entrance]
 tag @e[type=area_effect_cloud,tag=pot_connection] remove pot_connection
