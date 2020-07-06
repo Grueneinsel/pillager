@@ -16,7 +16,6 @@ tag @e[type=area_effect_cloud,tag=stair_entrance,tag=connect_me,scores={turn=0},
 execute unless entity @e[type=area_effect_cloud,tag=center_stair] run tag @e[type=area_effect_cloud,tag=stair_entrance,tag=connect_me,limit=1,sort=furthest] add center_stair
 
 scoreboard players set total turn 0
-execute at @e[type=area_effect_cloud,tag=connect_me] run setblock ~ ~ ~ birch_planks
 tag @e[type=area_effect_cloud,tag=connect_me] add pot_connection
 execute at @e[type=area_effect_cloud,tag=connection,scores={path=3..4}] run setblock ~ ~ ~ blue_concrete
 execute as @e[type=area_effect_cloud,tag=center_stair] at @s run function map:gen/stair_search
