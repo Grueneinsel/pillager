@@ -17,6 +17,7 @@ execute unless entity @e[type=area_effect_cloud,tag=center_stair] run tag @e[typ
 
 scoreboard players set total turn 0
 tag @e[type=area_effect_cloud,tag=connect_me] add pot_connection
+execute at @e[type=area_effect_cloud,tag=stair_entrance,tag=connect_me] run setblock ~ ~ ~ birch_planks
 execute at @e[type=area_effect_cloud,tag=connection,scores={path=3..4}] run setblock ~ ~ ~ blue_concrete
 execute as @e[type=area_effect_cloud,tag=center_stair] at @s run function map:gen/stair_search
 say @e[type=area_effect_cloud,tag=stair_entrance,tag=reconnect_me]
