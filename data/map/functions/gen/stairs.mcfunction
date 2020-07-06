@@ -17,5 +17,6 @@ scoreboard players set @e[type=minecraft:area_effect_cloud,tag=stair_entrance] p
 execute as @e[type=area_effect_cloud,tag=stair_entrance] store result score @s y run data get entity @s Pos[1]
 execute as @e[type=area_effect_cloud,tag=stair_entrance] store result score @s rotation run data get entity @s Rotation[0]
 scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,scores={rotation=90}] rotation 1
+scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,scores={rotation=180}] rotation 2
 scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,scores={rotation=-180}] rotation 2
 scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,scores={rotation=-90}] rotation 3
