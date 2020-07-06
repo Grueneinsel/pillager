@@ -1,5 +1,3 @@
-say Connect stairs
-
 tag @e[type=area_effect_cloud,tag=connect_me] remove connect_me
 
 execute unless entity @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=5}] run tag @e[type=area_effect_cloud,tag=stair_entrance,scores={y=5}] add connect_me
