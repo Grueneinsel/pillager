@@ -30,6 +30,7 @@ scoreboard players set 10 int 10
 scoreboard players set 1000 int 1000
 scoreboard players set -1000 int -1000
 scoreboard players set 64 int 64
+scoreboard players set 90 int 90
 scoreboard players set 4096 int 4096
 scoreboard players set 262144 int 262144
 scoreboard players set 16777216 int 16777216
