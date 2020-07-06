@@ -24,4 +24,4 @@ execute at @e[type=area_effect_cloud,tag=center_stair] as @e[type=area_effect_cl
 
 tag @e[type=area_effect_cloud,tag=center_stair] remove center_stair
 tag @e[type=area_effect_cloud,tag=reconnect_me] remove reconnect_me
-execute if entity @e[type=area_effect_cloud,tag=stair_entrance,scores={path=0}] run function map:gen/connect_stairs
+#execute if entity @e[type=area_effect_cloud,tag=stair_entrance,scores={path=0}] run function map:gen/connect_stairs
