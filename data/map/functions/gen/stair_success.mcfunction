@@ -11,3 +11,4 @@ tag @e[type=area_effect_cloud,tag=blue_block,tag=stair_entrance] remove blue_blo
 kill @e[type=area_effect_cloud,tag=blue_block]
 execute at @e[type=area_effect_cloud,tag=pot_connection] run setblock ~ ~ ~ air
 kill @e[type=area_effect_cloud,tag=pot_connection]
+tag @e[type=area_effect_cloud,tag=connect_me] remove connect_me
