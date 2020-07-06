@@ -56,7 +56,7 @@ scoreboard players set current y 5
 scoreboard players set @e[type=area_effect_cloud,tag=entrance,tag=middle_path] count 200
 scoreboard players set total room_id -1
 function map:gen/connect_room
-function map:gen/connect_stairs
+#function map:gen/connect_stairs
 
 
 execute unless entity @p[tag=debug] run function map:gen/finished
