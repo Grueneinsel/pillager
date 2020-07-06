@@ -2,6 +2,7 @@ execute if entity @p[tag=debugmsg] run say connect door
 
 ##Set walls of other paths
 execute at @e[type=area_effect_cloud,tag=connection,scores={path=3..4}] run setblock ~ ~ ~ birch_planks
+execute at @e[type=area_effect_cloud,tag=stair_entrance,scores={path=2}] run setblock ~ ~ ~ birch_planks
 tag @e[type=area_effect_cloud,tag=connect_me] remove connect_me
 
 ##Determine nearest door of a given room
@@ -17,7 +18,6 @@ tag @e[type=area_effect_cloud,tag=connect_me] add debug_aec
 execute as @e[type=area_effect_cloud,tag=connect_me] at @s rotated as @s positioned ^ ^ ^12 if block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
 execute as @e[type=area_effect_cloud,tag=connect_me] at @s rotated as @s positioned ^6 ^ ^6 if block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
 execute as @e[type=area_effect_cloud,tag=connect_me] at @s rotated as @s positioned ^-6 ^ ^6 if block ~ ~ ~ oak_planks run setblock ~ ~ ~ air
-execute at @e[type=area_effect_cloud,tag=stair_entrance,scores={path=2}] run setblock ~ ~ ~ oak_planks
 execute at @e[type=area_effect_cloud,tag=stair_entrance,scores={path=0}] run setblock ~ ~ ~ oak_planks
 execute as @e[type=area_effect_cloud,tag=connect_me] at @s run function map:gen/search_connection
 
