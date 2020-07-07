@@ -5,7 +5,7 @@ execute unless entity @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scor
 execute unless entity @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=14}] unless entity @e[type=area_effect_cloud,tag=connect_me] run tag @e[type=area_effect_cloud,tag=stair_entrance,scores={y=14}] add connect_me
 
 scoreboard players set @e[type=area_effect_cloud,tag=connect_me] turn 0
-execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=14}] at @s rotated as @s positioned ^ ^-9 ^-6 run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..7] turn 1
+execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=14}] at @s rotated as @s positioned ^ ^-9 ^-6 run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..7] turn 3
 execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=14}] at @s rotated as @s positioned ^ ^-9 ^-12 run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..1] turn 0
 execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=14}] at @s rotated as @s positioned ~ ~-9 ~ run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..1] turn 6
 execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=door,scores={y=5}] at @s rotated as @s positioned ^ ^9 ^-6 run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..7] turn 1
@@ -23,4 +23,4 @@ execute at @e[type=area_effect_cloud,tag=center_stair] as @e[type=area_effect_cl
 
 tag @e[type=area_effect_cloud,tag=center_stair] remove center_stair
 tag @e[type=area_effect_cloud,tag=reconnect_me] remove reconnect_me
-#execute if entity @e[type=area_effect_cloud,tag=stair_entrance,scores={path=0}] unless entity @p[tag=debug] run function map:gen/connect_stairs
+execute if entity @e[type=area_effect_cloud,tag=stair_entrance,scores={path=0}] unless entity @p[tag=debug] run function map:gen/connect_stairs
