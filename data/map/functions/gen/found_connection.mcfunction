@@ -22,3 +22,5 @@ tag @s remove connect_me_next
 tag @s remove reconnect_me
 tag @s remove debug_aec
 tag @s remove connect_me
+
+execute if entity @p[tag=debug] if entity @e[type=area_effect_cloud,tag=connect_me_next] run say at least 1 door left
