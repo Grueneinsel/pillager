@@ -15,7 +15,7 @@ tag @e[type=area_effect_cloud,tag=remove_wood] remove remove_wood
 
 execute as @e[type=area_effect_cloud,tag=normal_room] if score @s room_id = total room_id at @s run function map:gen/rotate_room
 
-execute as @e[type=area_effect_cloud,tag=entrance] if score @s turn = total turn run tag @s add door
+execute as @e[type=area_effect_cloud,tag=entrance] if score @s room_id = total room_id run tag @s add door
 scoreboard players add total_reset count 1
 scoreboard players set reset count 0
 execute if score total_reset count matches 3.. run function map:gen/new_mansion
