@@ -1,4 +1,3 @@
-execute if block ~ ~ ~ blue_concrete run tag @s add blue_block
 execute unless block ~ ~ ~ blue_concrete run setblock ~ ~ ~ birch_planks
 scoreboard players add @s[tag=!straight] turn 2
 scoreboard players add @s[tag=straight] turn 1
