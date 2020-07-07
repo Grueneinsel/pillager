@@ -9,7 +9,7 @@ execute at @e[type=area_effect_cloud,tag=reconnect_me] as @e[type=area_effect_cl
 execute at @e[type=area_effect_cloud,tag=reconnect_me] run tag @e[type=area_effect_cloud,tag=door,distance=..1] add path_found
 execute at @e[type=area_effect_cloud,tag=reconnect_me] run tag @e[type=area_effect_cloud,tag=door,distance=..1] add connected_to_current_room
 execute as @e[type=area_effect_cloud,tag=reconnect_me] at @s if entity @e[type=area_effect_cloud,tag=connection,distance=..1,scores={path=4}] rotated as @s positioned ^ ^ ^6 run function map:gen/connect_merge
-execute at @e[type=area_effect_cloud,tag=reconnect_me] run scoreboard players set @e[type=area_effect_cloud,tag=connection,distance=..1,scores={path=4}] path 1
+execute at @e[type=area_effect_cloud,tag=reconnect_me] run scoreboard players set @e[type=area_effect_cloud,tag=connection,distance=..1,scores={path=3}] path 1
 execute at @e[type=area_effect_cloud,tag=reconnect_me] run setblock ~ ~ ~ air
 tag @s add pot_connection
 execute as @e[type=area_effect_cloud,tag=reconnect_me] at @s rotated as @s positioned ^ ^ ^-6 run function map:gen/connect_back
