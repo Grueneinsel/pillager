@@ -20,7 +20,7 @@ execute as @e[type=area_effect_cloud,tag=connect_me_next,tag=!connect_me] at @s 
 
 ##Reset all doors that were connected
 tag @e[type=area_effect_cloud,tag=door,tag=connected_to_current_room] remove path_found
-execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=connected_to_current_room] rotated as @s positioned ^ ^ ^-6 run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..7] path 0
+execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=connected_to_current_room] at @s rotated as @s positioned ^ ^ ^-6 run scoreboard players set @e[type=area_effect_cloud,tag=stair_entrance,distance=..7] path 0
 tag @e[type=area_effect_cloud,tag=stair_entrance,tag=connected_to_current_room] remove door
 tag @e[type=area_effect_cloud,tag=connected_to_current_room] remove connected_to_current_room
 execute at @e[type=area_effect_cloud,tag=door,tag=!path_found] run setblock ~ ~ ~ blue_concrete
