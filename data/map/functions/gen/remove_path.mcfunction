@@ -24,5 +24,4 @@ execute as @e[type=area_effect_cloud,tag=stair_entrance,tag=connected_to_current
 tag @e[type=area_effect_cloud,tag=stair_entrance,tag=connected_to_current_room] remove door
 tag @e[type=area_effect_cloud,tag=connected_to_current_room] remove connected_to_current_room
 execute at @e[type=area_effect_cloud,tag=door,tag=!path_found] run setblock ~ ~ ~ blue_concrete
-execute at @e[type=area_effect_cloud,tag=stair_entrance,scores={path=0}] run setblock ~ ~ ~ blue_concrete
 tag @s[tag=middle_path] remove middle_path
