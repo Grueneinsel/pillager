@@ -15,6 +15,7 @@ execute if score retry count matches 2 if score reset count matches 0..2 run fun
 
 execute if entity @p[tag=debugmsg] if score retry count matches 3 run say Retry 3 (again with connection to other paths)
 execute if score retry count matches 3 at @e[type=area_effect_cloud,tag=connection,scores={path=4}] unless block ~ ~ ~ oak_planks run setblock ~ ~ ~ blue_concrete
+execute if score retry count matches 3 at @e[type=area_effect_cloud,tag=stair_entrance,scores={path=0}] run setblock ~ ~ ~ blue_concrete
 
 execute if entity @p[tag=debugmsg] if score retry count matches 4 run say Retry 4 (This layout is impossible)
 execute if score retry count matches 4 run scoreboard players set reset count 3
