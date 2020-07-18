@@ -51,3 +51,5 @@ scoreboard objectives add turn dummy
 scoreboard objectives add path dummy
 scoreboard objectives add taxi_distance dummy
 scoreboard objectives add types dummy
+scoreboard objectives add connection dummy
+scoreboard objectives add windows dummy
