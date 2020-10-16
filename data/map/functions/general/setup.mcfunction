@@ -53,3 +53,4 @@ scoreboard objectives add taxi_distance dummy
 scoreboard objectives add types dummy
 scoreboard objectives add connection dummy
 scoreboard objectives add windows dummy
+data merge storage random {random:[]}
